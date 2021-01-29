@@ -1,3 +1,7 @@
 {
-  "projects": {}
+  "projects": {
+    "blockchain-interactor": "git@gitlab.com:sweleven/blockchain-interactor.git",
+    "blockchain-contracts": "git@gitlab.com:sweleven/blockchain-contracts.git",
+    "ganache-cli": "git@gitlab.com:sweleven/ganache-cli.git"
+  }
 }
