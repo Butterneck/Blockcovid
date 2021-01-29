@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blockchain-interactor-mongo
+  namespace: blockchain-interactor
+  labels:
+    app: blockchain-interactor-mongo
+spec:
+  ports:
+    - name: db-port
+      port: 27017
+      targetPort: 27017
+  selector:
+    app: blockchain-interactor-mongo
+  type: LoadBalancer

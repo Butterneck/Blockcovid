@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blockchain-interactor-mongo
+  namespace: blockchain-interactor
+  labels:
+    app: blockchain-interactor-mongo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blockchain-interactor-mongo
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      namespace: blockchain-interactor
+      labels:
+        app: blockchain-interactor-mongo
+    spec:
+      containers:
+        - name: blockchain-interactor-mongo
+          image: mongo:latest
+          env:
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              value: root
+            - name: MONGO_INITDB_ROOT_USERNAME
+              value: root
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - mountPath: /data/db
+              name: blockchain-interactor-mongo-volume
+      volumes:
+        - name: blockchain-interactor-mongo-volume
+          persistentVolumeClaim:
+            claimName: blockchain-interactor-mongo-volume
+        

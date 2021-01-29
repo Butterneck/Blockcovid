@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blockchain-interactor
+  namespace: blockchain-interactor
+  labels:
+    app: blockchain-interactor-service
+spec:
+  ports:
+    - name: debugger
+      port: 922
+      targetPort: 9229
+    - name: application-port
+      port: 3000
+      targetPort: 3000
+  selector:
+    app: blockchain-interactor
+  type: LoadBalancer

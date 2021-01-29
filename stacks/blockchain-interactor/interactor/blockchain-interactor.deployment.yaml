@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blockchain-interactor
+  namespace: blockchain-interactor
+  labels:
+    app: blockchain-interactor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blockchain-interactor
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      namespace: blockchain-interactor
+      labels:
+        app: blockchain-interactor
+    spec:
+      containers:
+        - name: blockchain-interactor
+          image: butterneck/blockchain-interactor:latest
+          ports:
+            - containerPort: 9229
+            - containerPort: 3000
+          volumeMounts:
+            - mountPath: /app
+              name: blockchain-interactor-claim
+      volumes:
+        - name: blockchain-interactor-claim
+          hostPath:
+            path: /data/blockchain-interactor/*
+    
