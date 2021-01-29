@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "stacks"
+		},
+		{
+			"path": "api-gateway-dummy"
 		}
 	],
 	"settings": {}
