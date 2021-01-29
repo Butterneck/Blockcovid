@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "blockchain-interactor"
+		},
+		{
+			"path": "blockchain-contracts"
+		},
+		{
+			"path": "ganache-cli"
+		},
+		{
+			"path": "stacks"
+		}
+	],
+	"settings": {}
+}
