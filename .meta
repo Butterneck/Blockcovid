@@ -3,6 +3,7 @@
     "blockchain-interactor": "git@gitlab.com:sweleven/blockchain-interactor.git",
     "blockchain-contracts": "git@gitlab.com:sweleven/blockchain-contracts.git",
     "ganache-cli": "git@gitlab.com:sweleven/ganache-cli.git",
-    "api-gateway-dummy": "git@gitlab.com:sweleven/api-gateway-dummy.git"
+    "api-gateway-dummy": "git@gitlab.com:sweleven/api-gateway-dummy.git",
+    "api-gateway": "git@gitlab.com:sweleven/api-gateway.git"
   }
 }
