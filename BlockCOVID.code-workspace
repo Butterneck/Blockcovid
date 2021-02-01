@@ -16,6 +16,9 @@
 			"path": "message-broker"
 		},
 		{
+			"path": "data-persistence"
+		},
+		{
 			"path": "stacks"
 		}
 	],

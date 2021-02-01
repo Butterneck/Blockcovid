@@ -4,6 +4,7 @@ services:
   # Blockchain simulator
   # ganache-cli:
   #   build:
+  #     dockerfile: dockerfile
   #     context: ../ganache-cli
   #   volumes:
   #     - ganache-volume:/ganache-data
@@ -14,8 +15,10 @@ services:
   #     options:
   #       loki-url: "loki:3100/loki/api/v1/push"
 
-  rabbitmq:
-    image: rabbitmq:3.7.3-management
+  message-broker:
+    build:
+      dockerfile: dockerfile
+      context: ../message-broker
     environment:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=admin
@@ -38,11 +41,14 @@ services:
     #   options:
     #     loki-url: "loki:3100/loki/api/v1/push"
 
-  blockchain-interactor-mongo:
-    image: mongo:latest
+  blockchain-interactor-data-persistence:
+    build:
+      dockerfile: dockerfile
+      context: ../data-persistence
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=root
+      - MONGO_INITDB_DATABASE=blockcovid
     volumes:
       - blockchain-interactor-mongo-volume:/data/db
     ports:
