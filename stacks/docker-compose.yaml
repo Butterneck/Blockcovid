@@ -14,22 +14,6 @@ services:
   #     options:
   #       loki-url: "loki:3100/loki/api/v1/push"
 
-  # API Gateway
-  api-gateway:
-    build:
-      dockerfile: docker/dockerfile.develop
-      context: ../api-gateway-dummy
-    volumes:
-      - ../api-gateway-dummy:/app
-    ports:
-      - "9230:9230"
-      - "3000:3000"
-    # logging:
-    #   driver: loki
-    #   options:
-    #     loki-url: "loki:3100/loki/api/v1/push"
-
-
   rabbitmq:
     image: rabbitmq:3.7.3-management
     environment:
