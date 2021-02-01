@@ -10,16 +10,13 @@
 			"path": "ganache-cli"
 		},
 		{
-			"path": "stacks"
-		},
-		{
-			"path": "api-gateway-dummy"
-		},
-		{
 			"path": "api-gateway"
 		},
 		{
 			"path": "message-broker"
+		},
+		{
+			"path": "stacks"
 		}
 	],
 	"settings": {}
