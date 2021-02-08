@@ -5,6 +5,7 @@
     "ganache-cli": "git@gitlab.com:sweleven/ganache-cli.git",
     "api-gateway": "git@gitlab.com:sweleven/api-gateway.git",
     "message-broker": "git@gitlab.com:sweleven/message-broker.git",
-    "data-persistence": "git@gitlab.com:sweleven/data-persistence.git"
+    "data-persistence": "git@gitlab.com:sweleven/data-persistence.git",
+    "web-interface": "git@gitlab.com:sweleven/web-interface.git"
   }
 }

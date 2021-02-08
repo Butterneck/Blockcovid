@@ -2,14 +2,14 @@ version: '3.7'
 
 services:
   # Blockchain simulator
-  # ganache-cli:
-  #   build:
-  #     dockerfile: dockerfile
-  #     context: ../ganache-cli
-  #   volumes:
-  #     - ganache-volume:/ganache-data
-  #   ports:
-  #     - 8545:8545
+  ganache-cli:
+    build:
+      dockerfile: dockerfile
+      context: ../ganache-cli
+    volumes:
+      - ganache-volume:/ganache-data
+    ports:
+      - 8545:8545
   #   logging:
   #     driver: loki
   #     options:
@@ -58,8 +58,36 @@ services:
     #   options:
     #     loki-url: "loki:3100/loki/api/v1/push"
 
+
+
+  # API Gateway
+  api-gateway:
+    build:
+      dockerfile: docker/dockerfile.develop
+      context: ../api-gateway-dummy
+    volumes:
+      - ../api-gateway-dummy:/app
+    ports:
+      - "9230:9230"
+      - "3000:3000"
+    # logging:
+    #   driver: loki
+    #   options:
+    #     loki-url: "loki:3100/loki/api/v1/push"
+
+
+  # Web Interface
+  web-interface:
+    build:
+      dockerfile: docker/dockerfile.develop
+      context: ../web-interface
+    volumes:
+      - ../web-interface/:/app/
+    ports:
+      - "4200:4200"
+
 volumes:
   blockchain-interactor-mongo-volume:
     driver: local
-  ganache-data:
+  ganache-volume:
     driver: local
