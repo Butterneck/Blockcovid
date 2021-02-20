@@ -1,20 +1,6 @@
 version: '3.7'
 
 services:
-  # Blockchain simulator
-  ganache-cli:
-    build:
-      dockerfile: dockerfile
-      context: ../ganache-cli
-    volumes:
-      - ganache-volume:/ganache-data
-    ports:
-      - 8545:8545
-  #   logging:
-  #     driver: loki
-  #     options:
-  #       loki-url: "loki:3100/loki/api/v1/push"
-
   message-broker:
     build:
       dockerfile: dockerfile
@@ -25,6 +11,48 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+    networks:
+      - main_network
+
+  # Inventory microservice
+  inventory:
+    build:
+      dockerfile: docker/dockerfile.develop
+      context: ../inventory
+    volumes:
+      - ../inventory:/app
+    ports:
+      - "9232:9232"
+      - "3002:3002"
+    env_file:
+      - ../inventory/.env.development # TODO: improve this
+    networks:
+      - main_network
+      - inventory_network
+    # logging:
+    #   driver: loki
+    #   options:
+    #     loki-url: "loki:3100/loki/api/v1/push"
+
+  inventory-data-persistence:
+    build:
+      dockerfile: dockerfile
+      context: ../data-persistence
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+      - MONGO_INITDB_DATABASE=blockcovid
+    volumes:
+      - inventory-mongo-volume:/data/db
+    ports:
+      - "27018:27017"
+    networks:
+      - inventory_network
+    # logging:
+    #   driver: loki
+    #   options:
+    #     loki-url: "loki:3100/loki/api/v1/push"
+
 
   # Blockchain-interactor microservice
   blockchain-interactor:
@@ -36,6 +64,11 @@ services:
     ports:
       - "9231:9231"
       - "3001:3001"
+    env_file:
+      - ../blockchain-interactor/.env.development # TODO: improve this
+    networks:
+      - main_network
+      - blockchain-interactor_network
     # logging:
     #   driver: loki
     #   options:
@@ -53,6 +86,8 @@ services:
       - blockchain-interactor-mongo-volume:/data/db
     ports:
       - "27017:27017"
+    networks:
+      - blockchain-interactor_network
     # logging:
     #   driver: loki
     #   options:
@@ -70,6 +105,8 @@ services:
     ports:
       - "9230:9230"
       - "3000:3000"
+    networks:
+      - main_network
     # logging:
     #   driver: loki
     #   options:
@@ -85,9 +122,19 @@ services:
       - ../web-interface/:/app/
     ports:
       - "4200:4200"
+    networks:
+      - main_network
+
+networks:
+  main_network:
+    name: main_network
+  blockchain-interactor_network:
+    name: blockchain-interactor_network
+  inventory_network:
+    name: inventory_network
 
 volumes:
   blockchain-interactor-mongo-volume:
     driver: local
-  ganache-volume:
+  inventory-mongo-volume:
     driver: local

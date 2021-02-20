@@ -1,6 +1,9 @@
 {
 	"folders": [
 		{
+			"path": "inventory"
+		},
+		{
 			"path": "blockchain-interactor"
 		},
 		{
