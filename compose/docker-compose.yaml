@@ -94,21 +94,29 @@ services:
 
 
   # API Gateway
-  # api-gateway:
-  #   build:
-  #     dockerfile: docker/dockerfile.develop
-  #     context: ../api-gateway-dummy
-  #   volumes:
-  #     - ../api-gateway-dummy:/app
-  #   ports:
-  #     - "9230:9230"
-  #     - "3000:3000"
-  #   networks:
-  #     - main_network
-  #   # logging:
-  #   #   driver: loki
-  #   #   options:
-  #   #     loki-url: "loki:3100/loki/api/v1/push"
+  api-gateway:
+    build:
+      dockerfile: dockerfile
+      context: ../api-gateway
+    environment:
+      - KONG_DATABASE=off
+      - KONG_DECLARATIVE_CONFIG=/usr/local/kong/declarative/kong.yml
+      - KONG_PROXY_ACCESS_LOG=/dev/stdout
+      - KONG_ADMIN_ACCESS_LOG=/dev/stdout
+      - KONG_PROXY_ERROR_LOG=/dev/stderr
+      - KONG_ADMIN_ERROR_LOG=/dev/stderr
+      - KONG_ADMIN_LISTEN=0.0.0.0:8001
+    volumes:
+      - ./routes:/usr/local/kong/declarative
+    ports:
+      - "80:8000"
+      - "8001:8001"
+    networks:
+      - main_network
+    # logging:
+    #   driver: loki
+    #   options:
+    #     loki-url: "loki:3100/loki/api/v1/push"
 
 
   # Web Interface
