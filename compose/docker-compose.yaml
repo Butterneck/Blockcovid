@@ -96,21 +96,21 @@ services:
 
 
   # API Gateway
-  api-gateway:
-    build:
-      dockerfile: docker/dockerfile.develop
-      context: ../api-gateway-dummy
-    volumes:
-      - ../api-gateway-dummy:/app
-    ports:
-      - "9230:9230"
-      - "3000:3000"
-    networks:
-      - main_network
-    # logging:
-    #   driver: loki
-    #   options:
-    #     loki-url: "loki:3100/loki/api/v1/push"
+  # api-gateway:
+  #   build:
+  #     dockerfile: docker/dockerfile.develop
+  #     context: ../api-gateway-dummy
+  #   volumes:
+  #     - ../api-gateway-dummy:/app
+  #   ports:
+  #     - "9230:9230"
+  #     - "3000:3000"
+  #   networks:
+  #     - main_network
+  #   # logging:
+  #   #   driver: loki
+  #   #   options:
+  #   #     loki-url: "loki:3100/loki/api/v1/push"
 
 
   # Web Interface
@@ -124,6 +124,7 @@ services:
       - "4200:4200"
     networks:
       - main_network
+
 
 networks:
   main_network:

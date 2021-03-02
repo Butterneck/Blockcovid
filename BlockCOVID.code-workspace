@@ -7,6 +7,12 @@
 			"path": "blockchain-interactor"
 		},
 		{
+			"path": "identities"
+		},
+		{
+			"path": "web-interface"
+		},
+		{
 			"path": "blockchain-contracts"
 		},
 		{
@@ -22,11 +28,21 @@
 			"path": "data-persistence"
 		},
 		{
-			"path": "web-interface"
+			"path": "android-app"
 		},
 		{
-			"path": "stacks"
+			"path": "compose"
+		},
+		{
+			"path": "k8s"
+		},
+		{
+			"path": "diagrams"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"cSpell.words": [
+			"nestjs"
+		]
+	}
 }
