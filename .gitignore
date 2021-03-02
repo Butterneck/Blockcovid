@@ -1,9 +1,7 @@
 /blockchain-interactor/
 /blockchain-contracts/
-/ganache-cli/
 /api-gateway-dummy/
 /api-gateway/
-/message-broker/
 /data-persistence/
 /web-interface/
 /inventory/

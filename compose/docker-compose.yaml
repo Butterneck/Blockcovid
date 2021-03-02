@@ -2,9 +2,7 @@ version: '3.7'
 
 services:
   message-broker:
-    build:
-      dockerfile: dockerfile
-      context: ../message-broker
+    image: rabbitmq:3.8-management
     environment:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=admin

@@ -16,13 +16,7 @@
 			"path": "blockchain-contracts"
 		},
 		{
-			"path": "ganache-cli"
-		},
-		{
 			"path": "api-gateway"
-		},
-		{
-			"path": "message-broker"
 		},
 		{
 			"path": "data-persistence"
