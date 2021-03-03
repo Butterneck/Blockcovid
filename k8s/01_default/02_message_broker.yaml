@@ -1,0 +1,48 @@
+# Message-broker Service
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: message-broker
+  name: message-broker
+spec:
+  ports:
+  - name: amqp
+    port: 5672
+    protocol: TCP
+    targetPort: 5672  # TODO: load from ConfigMap
+  - name: admin
+    port: 80
+    protocol: TCP
+    targetPort: 15672  # TODO: load from ConfigMap
+  selector:
+    app: message-broker
+---
+# Message-broker Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: message-broker
+  name: message-broker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: message-broker
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: message-broker
+    spec:
+      containers:
+        - name: message-broker
+          image: rabbitmq:3.8-management
+          envFrom:      
+            - configMapRef:
+                name: message-broker-config
+            - secretRef:
+                name: message-broker-secret
+      restartPolicy: Always

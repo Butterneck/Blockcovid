@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: blockchain-interactor
+---
+# Api ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+  namespace: blockchain-interactor
+data:
+  PORT: "3001"
+  MONGO_HOST: database
+  MONGO_PORT: "80"
+  MONGO_DB: blockcovid
+  INFURA_URL: https://rinkeby.infura.io/v3/
+  RABBITMQ_HOST: message-broker
+  RABBITMQ_PORT: "5672"
+  RABBITMQ_QUEUE_NAME: blockchain-interactor
+---
+# Database ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-config
+  namespace: blockchain-interactor
+data:
+  MONGO_INITDB_DATABASE: blockcovid

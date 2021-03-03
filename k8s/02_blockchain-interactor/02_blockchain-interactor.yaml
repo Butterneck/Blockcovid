@@ -1,0 +1,113 @@
+# Blockchain-interactor Service
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: api
+  name: api
+  namespace: blockchain-interactor
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 3001  # TODO: load from ConfigMap
+  selector:
+    app: api
+---
+# Blockchain-interactor Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: api
+  name: api
+  namespace: blockchain-interactor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: api
+          image: registry.gitlab.com/sweleven/blockchain-interactor
+          envFrom:      
+            - configMapRef:
+                name: api-config
+            - secretRef:
+                name: api-secret
+      restartPolicy: Always
+---
+# Blockchain-interactor-db Service
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: database
+  name: database
+  namespace: blockchain-interactor
+spec:
+  ports:
+  - port: 80
+    targetPort: 27017 # TODO: load from ConfigMap
+  selector:
+    app: database
+---
+# Blockchain-interactor-db PersistentVolumeClaim
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app: database-volume
+  name: database-volume
+  namespace: blockchain-interactor
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+---
+# Blockchain-interactor-db Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: database
+  name: database
+  namespace: blockchain-interactor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: database
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: database
+    spec:
+      containers:
+        - name: database
+          image: registry.gitlab.com/sweleven/data-persistence
+          envFrom:      
+            - configMapRef:
+                name: database-config
+            - secretRef:
+                name: database-secret
+          volumeMounts:
+            - mountPath: /data/db
+              name: database-volume
+      restartPolicy: Always
+      volumes:
+        - name: database-volume
+          persistentVolumeClaim:
+            claimName: database-volume
+

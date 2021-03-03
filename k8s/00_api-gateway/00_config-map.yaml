@@ -1,0 +1,8 @@
+# Kong ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kong-config
+  namespace: kong
+data:
+  KEYCLOAK_DISCOVERY: http://192.168.210.40:8080/auth/realms/sweleven/.well-known/openid-configuration

@@ -1,0 +1,7 @@
+# Message-broker ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: message-broker-config
+data:
+  FOO: foo

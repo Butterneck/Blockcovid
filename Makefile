@@ -9,5 +9,8 @@ help: ## This help.
 up: ## Starts project using docker-compose
 	docker-compose -f ./compose/docker-compose.yaml up --build
 
-k8s-up: ## Starts project using minikube
-	minikube start && minikube apply -f k8s
+kubernetes: ## Starts project using minikube
+	@kubectl apply -R -f k8s
+
+cluster-ip:	## Get entrypoint for k8s
+	@minikube service -n kong kong-proxy --url | head -1
