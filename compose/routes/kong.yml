@@ -1,18 +1,42 @@
-# TODO: Fill in
 _format_version: "2.1"
 _transform: true
 
 services:
-- name: my-service
-  url: https://example.com
-  plugins:
-  - name: key-auth
+- host: blockchain-interactor
+  port: 3001
+  protocol: http
   routes:
-  - name: my-route
+  - hosts:
+    - localhost
+    paths:
+    - /api/blockchain-interactor
+    strip_path: true
+
+- host: inventory
+  port: 3002
+  protocol: http
+  routes:
+  - hosts:
+    - localhost
+    paths:
+    - /api/inventory
+    strip_path: true
+
+- host: identities
+  port: 3003
+  protocol: http
+  routes:
+  - hosts:
+    - localhost
+    paths:
+    - /api/identities
+    strip_path: true
+
+- host: web-interface
+  port: 4200
+  protocol: http
+  routes:
+  - hosts:
+    - localhost
     paths:
     - /
-
-consumers:
-- username: my-user
-  keyauth_credentials:
-  - key: my-key
