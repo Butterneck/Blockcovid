@@ -40,3 +40,13 @@ services:
     - localhost
     paths:
     - /
+
+- host: message-broker
+  port: 15672
+  protocol: http
+  routes:
+  - hosts:
+    - localhost
+    paths:
+    - /internals/message-broker
+    strip_path: true
