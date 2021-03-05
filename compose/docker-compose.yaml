@@ -91,6 +91,24 @@ services:
     #   options:
     #     loki-url: "loki:3100/loki/api/v1/push"
 
+  # Identities microservice
+  identities:
+    build:
+      dockerfile: docker/dockerfile.develop
+      context: ../identities
+    volumes:
+      - ../identities:/app
+    ports:
+      - "9233:9233"
+      - "3003:3003"
+    env_file:
+      - ../identities/.env.development # TODO: improve this
+    networks:
+      - main_network
+    # logging:
+    #   driver: loki
+    #   options:
+    #     loki-url: "loki:3100/loki/api/v1/push"
 
 
   # API Gateway
