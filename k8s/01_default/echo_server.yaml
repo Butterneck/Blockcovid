@@ -4,6 +4,8 @@ metadata:
   labels:
     app: echo
   name: echo
+  annotations:
+    konghq.com/plugins: kong-oidc,request-id
 spec:
   ports:
   - port: 8080

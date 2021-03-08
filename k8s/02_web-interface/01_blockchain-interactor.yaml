@@ -1,0 +1,45 @@
+# web-interface Service
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: api
+  name: api
+  namespace: web-interface
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80  # TODO: load from ConfigMap
+  selector:
+    app: api
+---
+# web-interface Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: api
+  name: api
+  namespace: web-interface
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: api
+          image: registry.gitlab.com/sweleven/web-interface
+          envFrom:      
+            - configMapRef:
+                name: api-config
+            - secretRef:
+                name: api-secret
+      restartPolicy: Always
