@@ -18,6 +18,7 @@ data:
   RABBITMQ_HOST: message-broker
   RABBITMQ_PORT: "5672"
   RABBITMQ_QUEUE_NAME: blockchain-interactor
+  ETHERSCAN_URL: https://rinkeby.etherscan.io/tx
 ---
 # Database ConfigMap
 apiVersion: v1

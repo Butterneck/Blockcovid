@@ -37,9 +37,4 @@ spec:
       containers:
         - name: api
           image: registry.gitlab.com/sweleven/web-interface
-          envFrom:      
-            - configMapRef:
-                name: api-config
-            - secretRef:
-                name: api-secret
       restartPolicy: Always
