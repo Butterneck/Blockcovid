@@ -33,15 +33,17 @@ services:
     #     loki-url: "loki:3100/loki/api/v1/push"
 
   inventory-data-persistence:
-    build:
-      dockerfile: dockerfile
-      context: ../data-persistence
+    image: bitnami/mongodb:4.2
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=root
-      - MONGO_INITDB_DATABASE=blockcovid
+      - MONGODB_ADVERTISED_HOSTNAME=inventory-data-persistence
+      - MONGODB_REPLICA_SET_MODE=primary
+      - MONGODB_ROOT_PASSWORD=password
+      - MONGODB_REPLICA_SET_KEY=replicasetkey123
+      - MONGODB_USERNAME=user
+      - MONGODB_PASSWORD=password
+      - MONGODB_DATABASE=blockcovid
     volumes:
-      - inventory-mongo-volume:/data/db
+      - inventory-mongo-volume:/bitnami
     ports:
       - "27018:27017"
     networks:
@@ -73,15 +75,17 @@ services:
     #     loki-url: "loki:3100/loki/api/v1/push"
 
   blockchain-interactor-data-persistence:
-    build:
-      dockerfile: dockerfile
-      context: ../data-persistence
+    image: bitnami/mongodb:4.2
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=root
-      - MONGO_INITDB_DATABASE=blockcovid
+      - MONGODB_ADVERTISED_HOSTNAME=blockchain-interactor-data-persistence
+      - MONGODB_REPLICA_SET_MODE=primary
+      - MONGODB_ROOT_PASSWORD=password
+      - MONGODB_REPLICA_SET_KEY=replicasetkey123
+      - MONGODB_USERNAME=user
+      - MONGODB_PASSWORD=password
+      - MONGODB_DATABASE=blockcovid
     volumes:
-      - blockchain-interactor-mongo-volume:/data/db
+      - blockchain-interactor-mongo-volume:/bitnami
     ports:
       - "27017:27017"
     networks:
