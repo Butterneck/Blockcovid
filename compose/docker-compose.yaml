@@ -27,6 +27,9 @@ services:
     networks:
       - main_network
       - inventory_network
+    depends_on: 
+      - message-broker
+      - inventory-data-persistence
     # logging:
     #   driver: loki
     #   options:
@@ -69,6 +72,9 @@ services:
     networks:
       - main_network
       - blockchain-interactor_network
+    depends_on: 
+      - message-broker
+      - blockchain-interactor-data-persistence
     # logging:
     #   driver: loki
     #   options:
