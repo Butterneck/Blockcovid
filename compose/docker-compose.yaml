@@ -101,6 +101,50 @@ services:
     #   options:
     #     loki-url: "loki:3100/loki/api/v1/push"
 
+  # Booking microservice
+  booking:
+    build:
+      dockerfile: docker/dockerfile.develop
+      context: ../booking
+    volumes:
+      - ../booking:/app
+    ports:
+      - "9234:9234"
+      - "3004:3004"
+    env_file:
+      - ../booking/.env.development # TODO: improve this
+    networks:
+      - main_network
+      - booking_network
+    depends_on: 
+      - message-broker
+      - booking-data-persistence
+    # logging:
+    #   driver: loki
+    #   options:
+    #     loki-url: "loki:3100/loki/api/v1/push"
+
+  booking-data-persistence:
+    image: bitnami/mongodb:4.2
+    environment:
+      - MONGODB_ADVERTISED_HOSTNAME=booking-data-persistence
+      - MONGODB_REPLICA_SET_MODE=primary
+      - MONGODB_ROOT_PASSWORD=password
+      - MONGODB_REPLICA_SET_KEY=replicasetkey123
+      - MONGODB_USERNAME=user
+      - MONGODB_PASSWORD=password
+      - MONGODB_DATABASE=blockcovid
+    volumes:
+      - booking-mongo-volume:/bitnami
+    ports:
+      - "27019:27017"
+    networks:
+      - booking_network
+    # logging:
+    #   driver: loki
+    #   options:
+    #     loki-url: "loki:3100/loki/api/v1/push"
+
   # Identities microservice
   identities:
     build:
@@ -167,9 +211,13 @@ networks:
     name: blockchain-interactor_network
   inventory_network:
     name: inventory_network
+  booking_network:
+    name: booking_network
 
 volumes:
   blockchain-interactor-mongo-volume:
     driver: local
   inventory-mongo-volume:
+    driver: local
+  booking-mongo-volume:
     driver: local

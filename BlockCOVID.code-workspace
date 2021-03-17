@@ -4,6 +4,9 @@
 			"path": "inventory"
 		},
 		{
+			"path": "booking"
+		},
+		{
 			"path": "blockchain-interactor"
 		},
 		{
@@ -17,6 +20,9 @@
 		},
 		{
 			"path": "api-gateway"
+		},
+		{
+			"path": "message-relay"
 		},
 		{
 			"path": "data-persistence"

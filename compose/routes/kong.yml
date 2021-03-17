@@ -32,6 +32,16 @@ services:
     - /api/identities
     strip_path: true
 
+- host: booking
+  port: 3004
+  protocol: http
+  routes:
+  - hosts:
+    - localhost
+    paths:
+    - /api/booking
+    strip_path: true
+
 - host: web-interface
   port: 4200
   protocol: http

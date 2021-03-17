@@ -7,6 +7,8 @@
     "web-interface": "git@gitlab.com:sweleven/web-interface.git",
     "inventory": "git@gitlab.com:sweleven/inventory.git",
     "android-app": "git@gitlab.com:sweleven/android-app.git",
-    "identities": "git@gitlab.com:sweleven/identities.git"
+    "identities": "git@gitlab.com:sweleven/identities.git",
+    "message-relay": "git@gitlab.com:sweleven/message-relay.git",
+    "booking": "git@gitlab.com:sweleven/booking.git"
   }
 }
