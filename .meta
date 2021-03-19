@@ -9,6 +9,7 @@
     "android-app": "git@gitlab.com:sweleven/android-app.git",
     "identities": "git@gitlab.com:sweleven/identities.git",
     "message-relay": "git@gitlab.com:sweleven/message-relay.git",
-    "booking": "git@gitlab.com:sweleven/booking.git"
+    "booking": "git@gitlab.com:sweleven/booking.git",
+    "documents": "git@gitlab.com:sweleven/documents.git"
   }
 }
