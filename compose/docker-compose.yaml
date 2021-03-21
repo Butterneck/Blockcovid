@@ -67,6 +67,10 @@ services:
     ports:
       - "9231:9231"
       - "3001:3001"
+    environment:
+      - MINIO_SERVER_ACCESS_KEY=minio-access-key
+      - MINIO_SERVER_SECRET_KEY=minio-secret-key
+      - MINIO_DEFAULT_BUCKETS=blockchain-events
     env_file:
       - ../blockchain-interactor/.env.development # TODO: improve this
     networks:
@@ -203,6 +207,17 @@ services:
     networks:
       - main_network
 
+  object-storage:
+    image: bitnami/minio
+    environment:
+      - MINIO_ACCESS_KEY=minio-access-key
+      - MINIO_SECRET_KEY=minio-secret-key
+    ports:
+      - 9000:9000
+    volumes:
+      - object-storage:/data
+    networks:
+      - main_network
 
 networks:
   main_network:
@@ -220,4 +235,6 @@ volumes:
   inventory-mongo-volume:
     driver: local
   booking-mongo-volume:
+    driver: local
+  object-storage:
     driver: local
