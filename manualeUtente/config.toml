@@ -2,7 +2,7 @@ baseURL = "http://localhost"
 title = "Sweleven - Manuale Utente v1.0.0"
 theme = "hugo-geekdoc"
 
-pluralizeListTitles = true
+pluralizeListTitles = false
 
 # Geekdoc required configuration
 pygmentsUseClasses = true
