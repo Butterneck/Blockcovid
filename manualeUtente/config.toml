@@ -1,5 +1,5 @@
 baseURL = "http://localhost"
-title = "Geekdocs"
+title = "Sweleven - Manuale Utente v1.0.0"
 theme = "hugo-geekdoc"
 
 pluralizeListTitles = false
