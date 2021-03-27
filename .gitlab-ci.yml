@@ -7,9 +7,9 @@ variables:
 test:
   script:
     - hugo -s $SITE_PATH
-  except:
-    variables:
-      - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  # except:
+  #   variables:
+  #     - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 pages:
   script:
@@ -17,6 +17,6 @@ pages:
   artifacts:
     paths:
       - $SITE_PATH/public
-  only:
-    variables:
-      - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  # only:
+  #   variables:
+  #     - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
