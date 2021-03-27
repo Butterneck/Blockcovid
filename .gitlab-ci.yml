@@ -1,5 +1,9 @@
 image: registry.gitlab.com/pages/hugo:latest
 
+stages:
+  - test
+  - build
+
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
   SITE_PATH: manualeUtente
@@ -14,9 +18,11 @@ test:
 pages:
   script:
     - hugo -s $SITE_PATH
+    - mkdir public 
+    - mv $SITE_PATH/public public 
   artifacts:
     paths:
-      - $SITE_PATH/public
+      - public
   # only:
   #   variables:
   #     - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
