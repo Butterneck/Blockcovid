@@ -9,6 +9,7 @@ variables:
   SITE_PATH: manualeUtente
 
 test:
+  stage: test
   script:
     - hugo -s $SITE_PATH
   # except:
@@ -16,6 +17,7 @@ test:
   #     - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 pages:
+  stage: build
   script:
     - hugo -s $SITE_PATH
     - mkdir public 
