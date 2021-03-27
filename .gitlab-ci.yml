@@ -5,14 +5,14 @@ variables:
 
 test:
   script:
-    - hugo
+    - hugo -s manualeUtente
   except:
     variables:
       - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 pages:
   script:
-    - hugo
+    - hugo -s manualeUtente
   artifacts:
     paths:
       - public
