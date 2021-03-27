@@ -20,8 +20,7 @@ pages:
   stage: build
   script:
     - hugo -s $SITE_PATH
-    - mkdir public 
-    - mv $SITE_PATH/public public 
+    - mv $SITE_PATH/public . 
   artifacts:
     paths:
       - public
