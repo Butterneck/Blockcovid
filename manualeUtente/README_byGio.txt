@@ -21,6 +21,7 @@ per ulteriori necessità rifarsi alla documentazione (che vi ho linkato a seguir
 4. Se tutto è andato liscio entrare da browser su "localhost:1313" (vedrete l'indirizzo anche nella penultima riga che vi è uscita sul terminale) per visualizzare il documento in locale
 
 5. Per scrivere si usa Markdown (se non lo conoscete, tranqui è molto easy): https://www.markdownguide.org/basic-syntax
+la struttura ed il contenuto del doc è tutto nella cartella "content"
 
 6. Qui documentazione generale con le funzionalità principali per usare il template Geekdoc che abbiamo usato: 
 https://geekdocs.de/usage/getting-started/
