@@ -1,4 +1,4 @@
-baseURL = "http://localhost"
+baseURL = "https://sweleven.gitlab.com/blockcovid"
 title = "Sweleven - Manuale Utente v1.0.0"
 theme = "hugo-geekdoc"
 
