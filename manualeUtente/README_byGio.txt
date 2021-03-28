@@ -10,6 +10,8 @@ per ulteriori necessità rifarsi alla documentazione (che vi ho linkato a seguir
 
     npm install
 
+    npm install gulp (se non già fatto precedentemente)
+
     npx gulp default
 
 
