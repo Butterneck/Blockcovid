@@ -41,7 +41,7 @@ Glossario dei termini tecnici riscontrabili all'interno del presente documento.
 ## O
 
 ## P
-
++ **Portale**<!--Sinonimo applicazione Web-->
 ## Q
 
 ## R
