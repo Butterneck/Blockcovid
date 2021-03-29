@@ -5,3 +5,4 @@ L'applicazione Web rende disponibili una serie di funzionalità legate alla gest
 ## Requisiti di sistema
 
 ## Installazione ed utilizzo
+
