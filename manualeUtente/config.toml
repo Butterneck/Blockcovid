@@ -1,5 +1,5 @@
 baseURL = "https://sweleven.gitlab.com/blockcovid"
-title = "Sweleven - Manuale Utente v1.0.0"
+title = "BlockCOVID - Manuale Utente v1.0.0"
 theme = "hugo-geekdoc"
 
 pluralizeListTitles = false
@@ -8,6 +8,8 @@ pluralizeListTitles = false
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 disablePathToLower = true
+enableGitInfo = true
+
 
 # Needed for mermaid shortcodes
 [markup]
@@ -17,3 +19,6 @@ disablePathToLower = true
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 9
+
+[params]
+geekdocMenuBundle = false
