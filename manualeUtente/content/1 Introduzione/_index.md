@@ -8,7 +8,7 @@ resources:
 ---
 
 
-{{< img name="logo" size="tiny" lazy=false >}}
+{{< img name="logo" size="small" lazy=false >}}
 
 ## Il gruppo
 
