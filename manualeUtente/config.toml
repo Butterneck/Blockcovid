@@ -1,4 +1,4 @@
-baseURL = "https://sweleven.gitlab.com/blockcovid"
+baseURL = "https://sweleven.gitlab.com/blockcovid/"
 title = "BlockCOVID - Manuale Utente v1.0.0"
 theme = "hugo-geekdoc"
 
@@ -20,5 +20,4 @@ enableGitInfo = true
     startLevel = 1
     endLevel = 9
 
-[params]
-geekdocMenuBundle = false
+

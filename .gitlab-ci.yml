@@ -11,6 +11,7 @@ variables:
 test:
   stage: test
   script:
+    - apk update && apk add git
     - hugo -s $SITE_PATH
   # except:
   #   variables:
@@ -19,6 +20,7 @@ test:
 pages:
   stage: build
   script:
+    - apk update && apk add git
     - hugo -s $SITE_PATH
     - mv $SITE_PATH/public . 
   artifacts:
