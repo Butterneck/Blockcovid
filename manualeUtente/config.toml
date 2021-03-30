@@ -20,4 +20,7 @@ enableGitInfo = true
     startLevel = 1
     endLevel = 9
 
+[params]
+geekdocCollapseSection = true
+
 

@@ -1,3 +1,7 @@
+---
+geekdocCollapseSection: true
+---
+
 Breve descrizione
 
 {{< toc >}}
