@@ -8,7 +8,6 @@ pluralizeListTitles = false
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 disablePathToLower = true
-enableGitInfo = true
 
 
 # Needed for mermaid shortcodes
@@ -20,5 +19,4 @@ enableGitInfo = true
     startLevel = 1
     endLevel = 9
 
-[params]
-geekdocMenuBundle = false
+
