@@ -1,0 +1,2 @@
+>### dipendente
+>Utente fruitore dell'*applicazione mobile*, attraverso la quale viene monitorato; può prenotare stanze o postazioni di lavoro e certificarne l'effettivo utilizzo ed eventuale igienizzazione effettuata.

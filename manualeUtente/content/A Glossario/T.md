@@ -1,0 +1,2 @@
+>### tracciamento
+>L’atto nel quale è avvenuta con successo il collegamento *RFID* tra il dispositivo mobile, munito dell’applicazione, del dipendente ed il dispositivo di lettura dell’ azienda. Questa funzione permette di monitorare gli utenti all’interno dell’area dell’azienda in modo più preciso e certificato.
