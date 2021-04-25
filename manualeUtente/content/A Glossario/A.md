@@ -1,3 +1,5 @@
+>### account
+>Indica quell'insieme di funzionalità, strumenti e contenuti attribuiti ad un utente che, in determinati contesti operativi, il sistema mette a disposizione.
 
 >### amministratore (sistema) 
 > Utente con credenziali di amministrazione, è l'unico ad avere accesso all'*applicazione web* per la gestione degli *utenti*, *stanze* e *postazioni*. 
