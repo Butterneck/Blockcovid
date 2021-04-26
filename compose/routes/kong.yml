@@ -54,3 +54,10 @@ services:
     paths:
     - /internals/message-broker
     strip_path: true
+
+plugins:
+- name: oidc
+  config:
+    client_id: kong
+    client_secret: 2fe3e73a-07fa-45db-98cd-3f97a9b37e81
+    discovery: http://192.168.210.40:8080/auth/realms/sweleven/.well-known/openid-configuration
