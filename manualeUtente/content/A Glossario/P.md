@@ -3,3 +3,5 @@
 
 >### postazione
 >Zona di lavoro ad uso di un singolo *dipendente*, all'interno di una *stanza*. Può essere prenotata attraverso l'*applicazione mobile* e và regolarmente igienizzata, dopo l'utilizzo, attraverso apposito kit.
+
+
