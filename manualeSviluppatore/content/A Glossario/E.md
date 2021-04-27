@@ -1,0 +1,2 @@
+>### embedded
+>Il termine identifica genericamente tutti quei sistemi elettronici di elaborazione a microprocessore progettati appositamente per un determinato utilizzo, ovvero non riprogrammabili dall'utente per altri scopi, spesso con una piattaforma hardware ad hoc, integrati nel sistema che controllano ed in grado di gestire tutte o parte delle funzionalità richieste. 
