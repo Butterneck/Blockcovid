@@ -3,7 +3,7 @@
 resources:
   - name: Infra
     src: "Infra.png"
-    title: 
+    title: "Schema dell'architettura generale del prodotto"
 ---
 Il sistema ***BlockCOVID*** riguarda il *tracciamento* dell’utilizzo e dell’igienizzazione di postazioni di lavoro all’interno di relative stanze, nel contesto di un laboratorio informatico.</br>
 
