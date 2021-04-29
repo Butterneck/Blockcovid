@@ -15,7 +15,7 @@ per ulteriori necessità rifarsi alla documentazione (che vi ho linkato a seguir
     npx gulp default
 
 
-3. Per avviare il server locale posizionarsi da terminale nella cartella "manualeUtente" (occhio NON su "ManualeUtente-old") e digitare:
+3. Per avviare il server locale posizionarsi da terminale nella cartella "manualeSviluppatore" e digitare:
 
     hugo server -D
 
