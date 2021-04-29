@@ -13,6 +13,9 @@
 			"path": "identities"
 		},
 		{
+			"path": "cleanings"
+		},
+		{
 			"path": "web-interface"
 		},
 		{
