@@ -7,3 +7,6 @@
 
 >### bootstrap
 >Raccolta di strumenti liberi per la creazione di siti e applicazioni per il Web. Essa contiene modelli di progettazione basati su HTML e CSS, sia per la tipografia, che per le varie componenti dell’interfaccia, come moduli, pulsanti e navigazione, così come alcune estensioni opzionali di JavaScript.
+
+>### build
+>Nel campo dell'informatica, e più in particolare dello sviluppo di software, il termine viene solitamente utilizzato per indicare il processo di trasformazione del codice sorgente in un artefatto eseguibile.
