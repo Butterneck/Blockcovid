@@ -5,7 +5,7 @@ resources:
     src: "Infra.png"
     title: "Schema dell'architettura generale del prodotto"
 ---
-Il sistema ***BlockCOVID*** riguarda il *tracciamento* dell’utilizzo e dell’igienizzazione di postazioni di lavoro all’interno di relative stanze, nel contesto di un laboratorio informatico.</br>
+Il sistema ***BlockCOVID*** riguarda il *tracciamento* dell’utilizzo e dell’igienizzazione di postazioni di lavoro, da parte di utenti registrati, all’interno di relative stanze, nel contesto di un laboratorio informatico.</br>
 
 ## Componenti
 Il prodotto si compone principalmente di:
