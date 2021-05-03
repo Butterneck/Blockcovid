@@ -38,6 +38,15 @@ services:
     - /api/booking
     strip_path: true
 
+- host: cleanings
+  port: 3005
+  protocol: http
+  routes:
+  - hosts:
+    paths:
+    - /api/cleanings
+    strip_path: true
+
 - host: web-interface
   port: 4200
   protocol: http
