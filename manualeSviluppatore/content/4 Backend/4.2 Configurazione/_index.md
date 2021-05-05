@@ -2,14 +2,21 @@
 *TODO: requisiti minimi di sistema per far girare tutto correttamente (essenzialmente la potenza di calcolo minima richiesta e che problemi può dare ad esempio su windows)*
 
 ## Configurazione ambiente di sviluppo
-Ogni servizio del *backend* e' distribuito sotto forma di *container docker*. Ciò permette di rendere lo sviluppo agnostico rispetto al sistema operativo utilizzato, di evitare conflitti con componenti esterne in quanto ogni container e' **autocontenuto**.</br>
+Ogni servizio del *backend* è distribuito sotto forma di *container docker*. Ciò permette di rendere lo sviluppo agnostico rispetto al sistema operativo utilizzato, di evitare conflitti con componenti esterne in quanto ogni container è **autocontenuto**.</br>
 I passi necessari da eseguire per il setup del backend sono i seguenti:
 
 1. Installare (o aver installato) sul proprio sistema **Git** ([qui](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) la guida ufficiale), attraverso il quale e' possibile scaricare codice sorgente;
    
 2. Installare il motore per JavaScript **Node.js** (versione LTS) e il gestore di pacchetti **npm** ([qui](https://nodejs.org/it/download/) la guida ufficiale);
    
-3. Per la gestione delle applicazioni *containerizzate*, è necessario installare sul proprio sistema i software **Docker** e **Docker Compose**.
+3. Installare (o aver installato) sul proprio sistema l'utility **make**:
+   > Su **Linux** è sufficiente eseguire da terminale il comando `sudo make install`;</br> 
+
+   > Se si utilizza **Windows**, è possibile utilizzando il comodo gestore di pacchetti [chocolatey](https://chocolatey.org/install) ed eseguire poi, da terminale, il comando `choco install make`;</br>
+
+   > Su **macOS** è possibile anch'esso da terminale installando prima **brew**, attraverso il comando `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`, e successivamente digitando `brew install make`.
+   
+4. Per la gestione delle applicazioni *containerizzate*, è necessario installare sul proprio sistema i software **Docker** e **Docker Compose**.
 Di seguito le guide ufficiali per i diversi sitemi operativi: </br>
 [Download e installazione Docker](https://docs.docker.com/get-docker/);
 [Download e installazione Compose](https://docs.docker.com/compose/install/);
@@ -22,11 +29,7 @@ Di seguito le guide ufficiali per i diversi sitemi operativi: </br>
    
 8. Se tutto è stato fatto correttamente, per eseguire il *backend* sarà sufficiente avviare **Docker** e successivamente digitare il comando `make up` da terminale all'interno della repository precedentemente clonata. Per il completamento del processo è necessario attendere qualche minuto.
 
-TODO: metti il l'installazione per make anche per linux e mac os. Mettila tra i primi passaggi
-   >Se si utilizza **Windows**, `make up` non viene nativamente riconosciuto. Basterà installare il comodo gestore di pacchetti [chocolatey](https://chocolatey.org/install) ed eseguire poi, da terminale, il comando `choco install make`.
-
-
-
+   
 ## Tecnologie utilizzate
 - **Nestjs:** framework **Node.js** progressivo per la creazione di applicazioni lato server efficienti, affidabili e scalabili; utilizza il linguaggio **Typescript** ed è stato utilizzato principalmente per sviluppare i divesi servizi messi a disposizione dal *backend*. </br>
   [Documentazione Nestjs](https://docs.nestjs.com/);

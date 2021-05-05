@@ -14,7 +14,7 @@ Il prodotto si compone principalmente di:
 - un'***applicazione mobile*** che permette agli utenti di usufruire dei servizi offerti.
 
 ## Architettura di base
-Il prodotto e' stato sviluppato utilizzando un'architettura a microservizi
+Il prodotto e' stato sviluppato utilizzando un'architettura a microservizi.
 
 Per realizzare un’architettura funzionale allo scopo del prodotto si è scelto di seguire un modello di architettura a *microservizi* che utilizza l’*API gateway* (come conseguenza dell’uso di questi). </br>
 Tramite ciò è possibile gestire in modo centralizzato l’autenticazione e l’autorizzazione dei vari utilizzatori e si nasconde all’utente finale l’architettura dell’applicazione aggiungendo un ulteriore livello di astrazione.</br>
