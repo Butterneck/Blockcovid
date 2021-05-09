@@ -9,3 +9,6 @@
 
 >### interfaccia utente (UI, user interface)
 >Interfaccia uomo-macchina, ovvero ciò che si frappone tra una macchina ed un utente, consentendone l’interazione reciproca.
+
+>### iOS
+>Sistema operativo mobile sviluppato da Apple per iPhone, iPod touch e iPad. È il secondo sistema operativo mobile più installato al mondo, dopo Android.

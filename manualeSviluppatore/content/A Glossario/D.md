@@ -1,3 +1,6 @@
+>### Dart
+>lLinguaggio di programmazione sviluppato da Google il cui scopo dichiarato è quello di "sostituire JavaScript come lingua franca per lo sviluppo web sulla piattaforma web aperto".
+
 >### dipendente
 >Utente fruitore dell'*applicazione mobile*, attraverso la quale viene monitorato; può prenotare stanze o postazioni di lavoro e certificarne l'effettivo utilizzo ed eventuale igienizzazione effettuata.
 

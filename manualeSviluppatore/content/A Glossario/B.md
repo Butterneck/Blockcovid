@@ -1,3 +1,5 @@
+>### backend
+>Parte del software o programma che permette l'effettivo funzionamento delle interazioni da esso permesse, attraverso il frontend.
 
 >### Blockchain
 >È una struttura dati condivisa ed "immutabile", definita come un registro digitale le cui voci sono raggruppate in "blocchi", concatenati in ordine cronologico, e la cui integrità è garantita dall’uso della crittografia.

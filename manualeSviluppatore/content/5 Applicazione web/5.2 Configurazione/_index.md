@@ -5,7 +5,7 @@ I requisiti minimi di sistema per poter sviluppare sul *frontend* web sono i med
 L'applicazione web rappresenta la *UI* per la gestione delle funzionalità offerte dal server. Per configurare l'ambiente di sviluppo è innanzitutto necessario aver configurato il proprio sistema ed essere in grado id eseguire il *backend*, (si veda anche in questo caso la sezione **4.2**).
 
 In aggiunta a ciò sarà necessario scaricare ed installare il *framework* principale utilizzato per lo sviluppo dell'applicazione:
-- **Angular:** chiamato anche "Angular 2+"  è un framework open source con licenza MIT sviluppato principalmente da *Google*, per lo sviluppo di siti ed applicazioni web.</br>
+- **Angular:** chiamato anche "Angular 2+"  è un *framework* open source con licenza *MIT* sviluppato principalmente da *Google*, per lo sviluppo di siti ed applicazioni web.</br>
   [Documentazione e configurazione di Angular](https://angular.io/guide/setup-local).
 
 I passi successivi per completare la configurazione del sistema sono:

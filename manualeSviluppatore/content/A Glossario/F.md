@@ -8,4 +8,4 @@
 >Insieme integrato di componenti software pre-fabbricate che offrono uno schema di soluzione preconfezionato per un determinato tipo di problema.
 
 >### frontend
->Insieme delle applicazioni e dei programmi informatici con cui l’utente interagisce direttamente (contrapposto a backend ).
+>Insieme delle applicazioni e dei programmi informatici con cui l’utente interagisce direttamente (contrapposto a backend).
