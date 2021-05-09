@@ -7,6 +7,8 @@ resources:
     title: Diagramma delle classi del servizio Booking
 ---
 
-{{< img name="classbooking" size="large" lazy=true >}}
+*TODO: descrizione generale del comportamento del servizio e dei metodi più importanti*
 
-*TODO: descrizione del comportamento del servizio e dei metodi più importanti..METTERE ANCHE LINK ALLA DOCUMENTAZIONE?*
+A [questo indirizzo](https://sweleven.gitlab.io/booking/) è inoltre possibile visionare la relativa documentazione autogenerata.
+
+{{< img name="classbooking" size="large" lazy=true >}}

@@ -9,4 +9,4 @@ resources:
 
 {{< img name="classfrontweb" size="large" lazy=true >}}
 
-*TODO: descrizione del comportamento e dei metodi più importanti..METTERE ANCHE LINK ALLA DOCUMENTAZIONE?*
+*TODO: descrizione del comportamento e dei metodi più importanti*
