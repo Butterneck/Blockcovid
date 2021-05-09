@@ -1,5 +1,6 @@
 | Versione | Data 	    | Descrizione 	                                   | Nominativo 	     | Ruolo 	     | Verificatore       |
 |--------- |------	    |-------------	                                   |------------	     |-------	     |----------          |
+|   0.5.1  | 2021-04-30 | Aggiornamento glossario                          |            	     |        	     |                    |
 |   0.5.0  | 2021-04-30 | Stesura capitoli §5.2, §6.2                      |            	     |       	     |                    |
 |   0.4.3  | 2021-04-28 | Modifica §4.1, §4.2                              |            	     |       	     |                    |
 |   0.4.2  | 2021-04-28 | Modifiche minori alla struttura                  |            	     |       	     |                    |
