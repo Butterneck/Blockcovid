@@ -21,3 +21,5 @@
 
 >### applicazione web
 >Applicazione distribuita, fruibile via web per mezzo di un network, come Internet. Offre determinati servizi all’utente che la utilizza. A differenza delle altre applicazioni non necessita di essere prima installata.
+### AVD
+>Un dispositivo virtuale Android è una configurazione che definisce le caratteristiche di un telefono, tablet, sistema operativo Wear, Android TV o sistema operativo automobilistico Android che desideri simulare in Android Emulato
