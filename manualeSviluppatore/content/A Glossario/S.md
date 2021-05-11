@@ -1,3 +1,6 @@
+>### SDK (Software Development Kit)
+>Traducibile in italiano come "pacchetto di sviluppo per applicazioni", in informatica, indica genericamente un insieme di strumenti per lo sviluppo e la documentazione di software.
+
 >### server
 >Computer di elevate prestazioni che in una rete fornisce un servizio agli altri elaboratori collegati, detti client.
 
