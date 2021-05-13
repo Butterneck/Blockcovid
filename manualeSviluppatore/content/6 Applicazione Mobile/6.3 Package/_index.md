@@ -7,7 +7,7 @@ resources:
 
 ---
 
-*TODO: descrizione generale del frontend e della struttura dei package*</br>
+Nella seguente immagine viene descritta la struttura dei package relativa all'**applicazione mobile**, le dipendenze principali tra di essi e le classi al loro interno.
 
 *immagine*
 {{< img name="<!--nome del file png (senza estensione) -->" size="large" lazy=false >}}

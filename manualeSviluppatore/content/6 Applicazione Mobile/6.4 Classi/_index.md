@@ -7,7 +7,7 @@ resources:
 
 ---
 
-*TODO: descrizione del comportamento e dei metodi più importanti*</br>
+Nelle seguenti immagini vengono descritte la struttura e le relazioni principali delle classi che compongono l'**applicazione mobile**.</br>
 
 *immagine*
 {{< img name="<!--nome del file png (senza estensione) -->" size="large" lazy=false >}}

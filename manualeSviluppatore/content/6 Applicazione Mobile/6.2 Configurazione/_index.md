@@ -1,12 +1,5 @@
 ## Requisiti di sistema
-I requisiti di sitema sono gli stessi indicati alla sezione **4.2**. </br>
-A seconda dell'ambiente di sviluppo vi è la possibilità di incorrere in alcuni rallentamenti.
-- **minimi:** 
-  - RAM: 8GB;
-  - CPU: dual-core.
-- **consigliati:**
-  - RAM: 16GB;
-  - CPU: quad-core (o più).
+I requisiti minimi di sistema per poter sviluppare sul *frontend* web sono i medesimi relativi allo sviluppo sul *backend*, descritti nella sezione **4.2**.
 
 ## Linguaggi e strumenti utilizzati
 - **Android Studio:** ambiente di sviluppo integrato per lo sviluppo per la piattaforma *Android*, utilizzato specialmente per utilizzare l’emulatore ed eseguire i test in locale, senza dover connettere e cambiare IP ogni volta; </br>

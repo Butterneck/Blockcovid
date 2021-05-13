@@ -1,5 +1,13 @@
 ## Requisiti di sistema
-*TODO: requisiti minimi di sistema per far girare tutto correttamente (essenzialmente la potenza di calcolo minima richiesta e che problemi può dare ad esempio su windows)*
+
+- **minimi:** 
+  - RAM: 8GB;
+  - CPU: dual-core.
+- **consigliati:**
+  - RAM: 16GB;
+  - CPU: quad-core (o più).
+
+A seconda dell'ambiente di sviluppo vi è la possibilità di incorrere in alcuni rallentamenti.
 
 ## Configurazione ambiente di sviluppo
 Ogni servizio del *backend* è distribuito sotto forma di *container docker*. Ciò permette di rendere lo sviluppo agnostico rispetto al sistema operativo utilizzato, di evitare conflitti con componenti esterne in quanto ogni container è **autocontenuto**.</br>

@@ -7,7 +7,7 @@ resources:
 
 ---
 
-*TODO: descrizione del servizio e della struttura del package*
+Nella seguente immagine viene descritta la struttura dei package del servizio **Inventory**, le dipendenze principali tra di essi e le classi al loro interno.
 
 {{< img name="PackageInventory" size="large" lazy=true >}}
 

@@ -6,6 +6,6 @@ resources:
     title: Diagramma dei package del servizio Cleaning
 ---
 
-*TODO: descrizione del servizio e della struttura del package*
+Nella seguente immagine viene descritta la struttura dei package del servizio **Cleaning**, le dipendenze principali tra di essi e le classi al loro interno.
 
 {{< img name="PackageCleaning" size="large" lazy=true >}}

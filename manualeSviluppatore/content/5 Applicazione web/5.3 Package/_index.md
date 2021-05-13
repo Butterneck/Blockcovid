@@ -10,7 +10,7 @@ resources:
     title: Classi contenute nei rispettivi package
 ---
 
-*TODO: descrizione del frontend e della struttura del package*
+Nella seguente immagine viene descritta la struttura dei package relativa all'**applicazione web**, le dipendenze principali tra di essi e le classi al loro interno. I package **@theme** e **@core** fanno parte del template scelto, priprio di *Angular*, perciò sono standard e non sono stati modificati manualmente.
 
 {{< img name="PackageWeb" size="large" lazy=false >}}
 

@@ -6,7 +6,7 @@ resources:
     src: "classbi.png"
     title: Diagramma delle classi del servizio Blockchain-interactor
 ---
-*TODO: descrizione generale del comportamento del servizio e dei metodi più importanti*
+Nella seguente immagine viene descritta la struttura e le relazioni principali delle classi che compongono il servizio **Blockchain-interactor**.
 
 A [questo indirizzo](https://sweleven.gitlab.io/blockchain-interactor/) è inoltre possibile visionare la relativa documentazione autogenerata.
 

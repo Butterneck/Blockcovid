@@ -6,6 +6,6 @@ resources:
     title: Diagramma dei package del servizio Identities
 ---
 
-*TODO: descrizione del servizio e della struttura del package* 
+Nella seguente immagine viene descritta la struttura dei package del servizio **Identities**, le dipendenze principali tra di essi e le classi al loro interno.
 
 {{< img name="PackageIdentities" size="large" lazy=true >}}
