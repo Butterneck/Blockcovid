@@ -3,26 +3,66 @@ image: registry.gitlab.com/pages/hugo:latest
 stages:
   - test
   - build
+  - publish
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  SITE_PATH: manualeUtente
+  MANUALE_UTENTE_PATH: manualeUtente
+  MANUALE_SVILUPPATORE_PATH: manualeSviluppatore
 
-test:
+test_manuale_utente:
   stage: test
   script:
     - apk update && apk add git
-    - hugo -s $SITE_PATH
+    - hugo -s $MANUALE_UTENTE_PATH
   # except:
   #   variables:
   #     - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
-pages:
+test_manuale_sviluppatore:
+  stage: test
+  script:
+    - apk update && apk add git
+    - hugo -s $MANUALE_SVILUPPATORE_PATH
+  # except:
+  #   variables:
+  #     - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+build_index:
+  stage: build
+  script:
+    - mkdir -p public
+    - cp index.html public
+  artifacts:
+    paths:
+      - public
+
+build_manuale_utente:
   stage: build
   script:
     - apk update && apk add git
-    - hugo -s $SITE_PATH
-    - mv $SITE_PATH/public . 
+    - hugo -s $MANUALE_UTENTE_PATH
+    - mkdir -p public
+    - mv $MANUALE_UTENTE_PATH/public public/manualeUtente
+  artifacts:
+    paths:
+      - public
+
+build_manuale_sviluppatore:
+  stage: build
+  script:
+    - apk update && apk add git
+    - hugo -s $MANUALE_SVILUPPATORE_PATH
+    - mkdir -p public
+    - mv $MANUALE_SVILUPPATORE_PATH/public public/manualeSviluppatore
+  artifacts:
+    paths:
+      - public
+
+pages:
+  stage: publish
+  script:
+    - echo 'Publishing'
   artifacts:
     paths:
       - public

@@ -44,6 +44,12 @@
 		},
 		{
 			"path": "manualeSviluppatore"
+		},
+		{
+			"path": "manualeUtente"
+		},
+		{
+			"path": "index.html"
 		}
 	],
 	"settings": {
