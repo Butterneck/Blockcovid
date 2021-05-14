@@ -41,6 +41,9 @@
 		},
 		{
 			"path": "manualeUtente"
+		},
+		{
+			"path": "manualeSviluppatore"
 		}
 	],
 	"settings": {

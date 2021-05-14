@@ -1,0 +1,21 @@
+
+
+/* site header */
+.gdoc-header { 
+    background: #1b1b1b; 
+    border-color: #b60303;
+}
+
+
+/* site footer */
+.gdoc-footer { 
+    display: none; 
+}
+
+
+div [class="gdoc-toc gdoc-toc__level--6"]{
+    float: right; 
+}
+
+
+

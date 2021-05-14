@@ -1,0 +1,26 @@
+baseURL = "https://sweleven.gitlab.com/blockcovid/"
+title = "BlockCOVID - Manuale Sviluppatore v.0.9.1"
+theme = "hugo-geekdoc"
+
+pluralizeListTitles = false
+
+# Geekdoc required configuration
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+disablePathToLower = true
+enableGitInfo = true
+
+
+# Needed for mermaid shortcodes
+[markup]
+  [markup.goldmark.renderer]
+    # Needed for mermaid shortcode
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 9
+
+[params]
+geekdocCollapseSection = true
+
+
