@@ -1,0 +1,1 @@
+A [questo indirizzo](https://sweleven.gitlab.io/blockchain-interactor/dependencies.html) è possibile visualizzare le dipendenze esterne.
