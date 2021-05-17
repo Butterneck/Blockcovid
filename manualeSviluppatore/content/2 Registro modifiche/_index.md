@@ -1,8 +1,8 @@
 | Versione | Data 	    | Descrizione 	                                   | Nominativo 	     | Ruolo 	     | Verificato da      |
 |--------- |------	    |-------------	                                   |------------	     |-------	     |----------          |
 |   0.9.1  | 2021-05-03 | Aggiornamento glossario                          | Filippo Pinton      | Progettista   | Alessio Trevisan   |
-|   0.9.0  | 2021-05-03 | Stesura §4.6                                     | Filippo Pinton      | Progettista   | Alessio Trevisan   |
-|   0.8.0  | 2021-05-02 | Stesura §4.5                                     | Filippo Pinton	     | Progettista   | Edoardo Caregnato  |
+|   0.9.0  | 2021-05-03 | Stesura §4.5, aggiunto §5.5                      | Filippo Pinton      | Progettista   | Alessio Trevisan   |
+|   0.8.0  | 2021-05-02 | Rimozione §4.6                                   | Filippo Pinton	     | Progettista   | Edoardo Caregnato  |
 |   0.7.0  | 2021-05-02 | Aggiunti diagrammi §6.3, §6.4                    | Andrea De Tomasi    | Progettista   | Edoardo Caregnato  |
 |   0.6.2  | 2021-05-02 | Modifica §6.2                                    | Elvis Murtezan      | Progettista   | Edoardo Caregnato  |
 |   0.6.1  | 2021-05-01 | Aggiornamento glossario                          | Elvis Murtezan      | Progettista   | Alessio Trevisan   |
