@@ -1,1 +1,0 @@
-A [questo indirizzo](https://sweleven.gitlab.io/web-interface/dependencies.html) è possibile visualizzare le dipendenze esterne.
