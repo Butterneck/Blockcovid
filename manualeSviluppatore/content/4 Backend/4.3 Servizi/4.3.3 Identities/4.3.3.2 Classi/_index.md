@@ -10,4 +10,4 @@ Nella seguente immagine viene descritta la struttura e le relazioni principali d
 
 A [questo indirizzo](https://sweleven.gitlab.io/identities/) è inoltre possibile visionare la relativa documentazione autogenerata.
 
-{{< img name="classidentities" size="large" lazy=false >}}
+{{< img name="classidentities" size="large" lazy=true >}}

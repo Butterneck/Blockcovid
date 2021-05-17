@@ -1,13 +1,12 @@
 ---
 
 resources:
-  - name: <!--nome del file png (senza estensione) -->
-    src: "<!--nome del file png (con estensione), và inserito nella stessa cartella di questo file -->"
-    title: <!--descrizione/didascalia dell'immagine -->
+  - name: classmobile
+    src: "classmobile.png"
+    title: Diagramma delle glassi relativo all'applicazione mobile
 
 ---
 
-Nelle seguenti immagini vengono descritte la struttura e le relazioni principali delle classi che compongono l'**applicazione mobile**.</br>
+Nelle seguenti immagini vengono distinte e descritte la struttura e le relazioni principali delle classi che compongono la parte di utilizzo Igienizzatore (sopra) ed utilizzo Dipendente (sotto), dell'**applicazione mobile**.</br>
 
-*immagine*
-{{< img name="<!--nome del file png (senza estensione) -->" size="large" lazy=false >}}
+{{< img name="classmobile" size="large" lazy=false >}}

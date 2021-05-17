@@ -8,5 +8,5 @@ resources:
 
 Nella seguente immagine viene descritta la struttura dei package del servizio **Booking**, le dipendenze principali tra di essi e le classi al loro interno.
 
-{{< img name="PackageBooking" size="large" lazy=false >}}
+{{< img name="PackageBooking" size="large" lazy=true >}}
 
