@@ -1,5 +1,5 @@
 baseURL = "https://sweleven.gitlab.io/blockcovid/manualeUtente"
-title = "BlockCOVID - Manuale Utente v1.0.0"
+title = "BlockCOVID - Manuale Utente v0.8.0"
 theme = "hugo-geekdoc"
 
 pluralizeListTitles = false
