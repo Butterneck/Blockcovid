@@ -7,11 +7,11 @@
   - RAM: 16GB;
   - CPU: quad-core (o più).
 
-A seconda dell'ambiente di sviluppo vi è la possibilità di incorrere in alcuni rallentamenti.
+A seconda del sistema operativo utilizzaot vi è la possibilità di incorrere in alcuni rallentamenti.
 
 ## Configurazione ambiente di sviluppo
-Ogni servizio del *backend* è distribuito sotto forma di *container docker*. Ciò permette di rendere lo sviluppo agnostico rispetto al sistema operativo utilizzato, di evitare conflitti con componenti esterne in quanto ogni container è **autocontenuto**.</br>
-I passi necessari da eseguire per il setup del backend sono i seguenti:
+Ogni servizio del *backend* è distribuito sotto forma di *container docker*. Ciò permette di rendere lo sviluppo agnostico rispetto al sistema operativo utilizzato, di evitare conflitti con componenti esterne in quanto ogni servizio è **autocontenuto** in un container.</br>
+I passi necessari da seguire per il setup del backend sono i seguenti:
 
 1. Installare (o aver installato) sul proprio sistema **Git** ([qui](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) la guida ufficiale), attraverso il quale e' possibile scaricare codice sorgente;
    
