@@ -23,7 +23,7 @@ I requisiti minimi di sistema per poter sviluppare sul *frontend* web sono i med
    
 ### Per eseguire e testare l'applicativo sarà quindi necessario:
 
-1. Essere connesso alla VPN dentro emulatore (o dispositivo fisico) e da PC; 
+1. Essere connesso alla VPN dentro emulatore (o dispositivo fisico) oppure da PC; 
 
 2. Aprire la repository da *Visual Studio Code* e compilare il file `main.dart` (all'interno della sotto-cartella chiamata **lib**) per creare l'applicazione mobile ed avviarla nell'emulatore o nel dispositivo fisico collegato. In alternativa è possibile eseguire da terminale il comando `flutter run` all'interno della repository appena clonata;
 
