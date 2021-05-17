@@ -7,7 +7,7 @@
   - RAM: 16GB;
   - CPU: quad-core (o più).
 
-A seconda del sistema operativo utilizzaot vi è la possibilità di incorrere in alcuni rallentamenti.
+A seconda del sistema operativo utilizzato vi è la possibilità di incorrere in alcuni rallentamenti.
 
 ## Configurazione ambiente di sviluppo
 Ogni servizio del *backend* è distribuito sotto forma di *container docker*. Ciò permette di rendere lo sviluppo agnostico rispetto al sistema operativo utilizzato, di evitare conflitti con componenti esterne in quanto ogni servizio è **autocontenuto** in un container.</br>
