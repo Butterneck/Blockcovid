@@ -47,14 +47,6 @@ services:
     - /api/cleanings
     strip_path: true
 
-- host: web-interface
-  port: 4200
-  protocol: http
-  routes:
-  - hosts:
-    paths:
-    - /
-
 - host: message-broker
   port: 15672
   protocol: http
@@ -63,6 +55,14 @@ services:
     paths:
     - /internals/message-broker
     strip_path: true
+
+- host: web-interface
+  port: 4200
+  protocol: http
+  routes:
+  - hosts:
+    paths:
+    - /
 
 plugins:
 - name: oidc
