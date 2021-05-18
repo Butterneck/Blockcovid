@@ -11,6 +11,11 @@ services:
       - "15672:15672"
     networks:
       - main_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:15672"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   # Inventory microservice
   inventory:
@@ -28,8 +33,10 @@ services:
       - main_network
       - inventory_network
     depends_on: 
-      - message-broker
-      - inventory-data-persistence
+      message-broker:
+        condition: service_healthy
+      inventory-data-persistence:
+        condition: service_healthy
     # logging:
     #   driver: loki
     #   options:
@@ -77,8 +84,10 @@ services:
       - main_network
       - blockchain-interactor_network
     depends_on: 
-      - message-broker
-      - blockchain-interactor-data-persistence
+      message-broker:
+        condition: service_healthy
+      blockchain-interactor-data-persistence:
+        condition: service_healthy
     # logging:
     #   driver: loki
     #   options:
@@ -121,8 +130,10 @@ services:
       - main_network
       - booking_network
     depends_on: 
-      - message-broker
-      - booking-data-persistence
+      message-broker:
+        condition: service_healthy
+      booking-data-persistence:
+        condition: service_healthy
     # logging:
     #   driver: loki
     #   options:
@@ -165,8 +176,10 @@ services:
       - main_network
       - cleanings_network
     depends_on: 
-      - message-broker
-      - cleanings-data-persistence
+      message-broker:
+        condition: service_healthy
+      cleanings-data-persistence:
+        condition: service_healthy
     # logging:
     #   driver: loki
     #   options:
