@@ -37,6 +37,18 @@
 			"path": "compose"
 		},
 		{
+			"path": "kong"
+		},
+		{
+			"path": "grafana"
+		},
+		{
+			"path": "prometheus"
+		},
+		{
+			"path": "loki"
+		},
+		{
 			"path": "k8s"
 		},
 		{

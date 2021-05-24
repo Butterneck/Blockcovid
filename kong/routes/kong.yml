@@ -72,3 +72,5 @@ plugins:
     discovery: http://192.168.210.40:8080/auth/realms/sweleven/.well-known/openid-configuration
     introspection_endpoint: http://192.168.210.40:8080/auth/realms/sweleven/protocol/openid-connect/token/introspect
     logout_path: /api/identities/logout
+
+- name: prometheus

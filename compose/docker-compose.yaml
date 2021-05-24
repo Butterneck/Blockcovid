@@ -9,8 +9,19 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+      - "15692:15692"
     networks:
       - main_network
+    logging:
+      driver: loki
+      options:
+        loki-timeout: 10s
+        mode: "non-blocking"
+        loki-batch-wait: 1s
+        loki-batch-size: "1000"
+        loki-min-backoff: 1s
+        loki-retries: "30"
+        loki-url: "loki:3100/loki/api/v1/push"
 
   # Inventory microservice
   inventory:
@@ -30,10 +41,16 @@ services:
     depends_on: 
       - message-broker
       - inventory-data-persistence
-    # logging:
-    #   driver: loki
-    #   options:
-    #     loki-url: "loki:3100/loki/api/v1/push"
+    logging:
+      driver: loki
+      options:
+        loki-timeout: 10s
+        mode: "non-blocking"
+        loki-batch-wait: 1s
+        loki-batch-size: "1000"
+        loki-min-backoff: 1s
+        loki-retries: "30"
+        loki-url: "loki:3100/loki/api/v1/push"
 
   inventory-data-persistence:
     image: bitnami/mongodb:4.2
@@ -54,6 +71,12 @@ services:
     # logging:
     #   driver: loki
     #   options:
+    #     loki-timeout: 10s
+    # mode: "non-blocking"
+    #     loki-batch-wait: 1s
+    #     loki-batch-size: "1000"
+    #     loki-min-backoff: 1s
+    #     loki-retries: "30"
     #     loki-url: "loki:3100/loki/api/v1/push"
 
 
@@ -79,10 +102,16 @@ services:
     depends_on: 
       - message-broker
       - blockchain-interactor-data-persistence
-    # logging:
-    #   driver: loki
-    #   options:
-    #     loki-url: "loki:3100/loki/api/v1/push"
+    logging:
+      driver: loki
+      options:
+        loki-timeout: 10s
+        mode: "non-blocking"
+        loki-batch-wait: 1s
+        loki-batch-size: "1000"
+        loki-min-backoff: 1s
+        loki-retries: "30"
+        loki-url: "loki:3100/loki/api/v1/push"
 
   blockchain-interactor-data-persistence:
     image: bitnami/mongodb:4.2
@@ -103,6 +132,12 @@ services:
     # logging:
     #   driver: loki
     #   options:
+    #     loki-timeout: 10s
+    # mode: "non-blocking"
+    #     loki-batch-wait: 1s
+    #     loki-batch-size: "1000"
+    #     loki-min-backoff: 1s
+    #     loki-retries: "30"
     #     loki-url: "loki:3100/loki/api/v1/push"
 
   # Booking microservice
@@ -123,10 +158,16 @@ services:
     depends_on: 
       - message-broker
       - booking-data-persistence
-    # logging:
-    #   driver: loki
-    #   options:
-    #     loki-url: "loki:3100/loki/api/v1/push"
+    logging:
+      driver: loki
+      options:
+        loki-timeout: 10s
+        mode: "non-blocking"
+        loki-batch-wait: 1s
+        loki-batch-size: "1000"
+        loki-min-backoff: 1s
+        loki-retries: "30"
+        loki-url: "loki:3100/loki/api/v1/push"
 
   booking-data-persistence:
     image: bitnami/mongodb:4.2
@@ -147,6 +188,12 @@ services:
     # logging:
     #   driver: loki
     #   options:
+    #     loki-timeout: 10s
+    # mode: "non-blocking"
+    #     loki-batch-wait: 1s
+    #     loki-batch-size: "1000"
+    #     loki-min-backoff: 1s
+    #     loki-retries: "30"
     #     loki-url: "loki:3100/loki/api/v1/push"
 
   # Cleanings microservice
@@ -167,10 +214,16 @@ services:
     depends_on: 
       - message-broker
       - cleanings-data-persistence
-    # logging:
-    #   driver: loki
-    #   options:
-    #     loki-url: "loki:3100/loki/api/v1/push"
+    logging:
+      driver: loki
+      options:
+        loki-timeout: 10s
+        mode: "non-blocking"
+        loki-batch-wait: 1s
+        loki-batch-size: "1000"
+        loki-min-backoff: 1s
+        loki-retries: "30"
+        loki-url: "loki:3100/loki/api/v1/push"
 
   cleanings-data-persistence:
     image: bitnami/mongodb:4.2
@@ -191,6 +244,12 @@ services:
     # logging:
     #   driver: loki
     #   options:
+    #     loki-timeout: 10s
+    # mode: "non-blocking"
+    #     loki-batch-wait: 1s
+    #     loki-batch-size: "1000"
+    #     loki-min-backoff: 1s
+    #     loki-retries: "30"
     #     loki-url: "loki:3100/loki/api/v1/push"
 
   # Identities microservice
@@ -207,10 +266,16 @@ services:
       - ../identities/.env.development # TODO: improve this
     networks:
       - main_network
-    # logging:
-    #   driver: loki
-    #   options:
-    #     loki-url: "loki:3100/loki/api/v1/push"
+    logging:
+      driver: loki
+      options:
+        loki-timeout: 10s
+        mode: "non-blocking"
+        loki-batch-wait: 1s
+        loki-batch-size: "1000"
+        loki-min-backoff: 1s
+        loki-retries: "30"
+        loki-url: "loki:3100/loki/api/v1/push"
 
 
   # API Gateway
@@ -228,16 +293,22 @@ services:
       - KONG_ADMIN_LISTEN=0.0.0.0:8001
       - KONG_PLUGINS=bundled,oidc
     volumes:
-      - ./routes:/usr/local/kong/declarative
+      - ../kong/routes:/usr/local/kong/declarative
     ports:
       - "80:8000"
       - "8001:8001"
     networks:
       - main_network
-    # logging:
-    #   driver: loki
-    #   options:
-    #     loki-url: "loki:3100/loki/api/v1/push"
+    logging:
+      driver: loki
+      options:
+        loki-timeout: 10s
+        mode: "non-blocking"
+        loki-batch-wait: 1s
+        loki-batch-size: "1000"
+        loki-min-backoff: 1s
+        loki-retries: "30"
+        loki-url: "loki:3100/loki/api/v1/push"
 
 
   # Web Interface
@@ -262,7 +333,18 @@ services:
     volumes:
       - object-storage:/data
     networks:
-      - main_network
+      - main_network    
+    logging:
+      driver: loki
+      options:
+        loki-timeout: 10s
+        mode: "non-blocking"
+        loki-batch-wait: 1s
+        loki-batch-size: "1000"
+        loki-min-backoff: 1s
+        loki-retries: "30"
+        loki-url: "loki:3100/loki/api/v1/push"
+  
 
 networks:
   main_network:

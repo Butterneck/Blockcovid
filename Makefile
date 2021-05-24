@@ -9,6 +9,9 @@ help: ## This help.
 up: ## Starts project using docker-compose
 	docker-compose -f ./compose/docker-compose.yaml up --build
 
+monitoring: ## Starts monitoring stack using docker-compose
+	docker-compose -f ./compose/docker-compose.monitoring.yaml up --build
+
 kubernetes: ## Starts project using minikube
 	@kubectl apply -R -f k8s
 
