@@ -20,8 +20,8 @@ services:
   prometheus:
     image: prom/prometheus
     command:
-      - '--web.enable-lifecycle'
-      - '--config.file=/etc/prometheus/prometheus.yaml'
+      - "--web.enable-lifecycle"
+      - "--config.file=/etc/prometheus/prometheus.yaml"
     volumes:
       - ../prometheus/prometheus.yaml:/etc/prometheus/prometheus.yaml
       - prometheus-volume:/prometheus
@@ -30,41 +30,52 @@ services:
     networks:
       - main_network
       - monitoring_network
-  
-  loki:
-    image: grafana/loki:2.1.0
-    command: -config.file=/etc/loki/local-config.yaml --log.level=debug
-    volumes:
-      - ../loki/loki.yaml:/etc/loki/local-config.yaml
+
+  # loki:
+  #   image: grafana/loki:2.1.0
+  #   command: -config.file=/etc/loki/local-config.yaml --log.level=debug
+  #   volumes:
+  #     - ../loki/loki.yaml:/etc/loki/local-config.yaml
+  #   ports:
+  #     - 3100:3100
+  #   networks:
+  #     - main_network
+  #     - monitoring_network
+  #   depends_on:
+  #     loki-persistence:
+  #       condition: service_healthy
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor
+    container_name: cadvisor
     ports:
-      - 3100:3100
-    networks:
+      - 8080:8080
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    networks: 
       - main_network
-      - monitoring_network
-    depends_on:
-      loki-persistence:
-        condition: service_healthy
 
-
-  loki-persistence:
-    image: minio/minio
-    entrypoint: /bin/sh -c "mkdir -p /data/loki && /usr/bin/docker-entrypoint.sh server /data"
-    environment:
-      MINIO_ACCESS_KEY: minio-access-key
-      MINIO_SECRET_KEY: minio-secret-key
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-      interval: 30s
-      timeout: 20s
-      retries: 3
-    ports:
-      - "9002:9000"
-    volumes:
-      - loki-volume:/data/
-      - ../loki/docker-entrypoint.sh:/docker-entrypoint.sh
-    networks:
-      - monitoring_network
-    
+  # loki-persistence:
+  #   image: minio/minio
+  #   entrypoint: /bin/sh -c "mkdir -p /data/loki && /usr/bin/docker-entrypoint.sh server /data"
+  #   environment:
+  #     MINIO_ACCESS_KEY: minio-access-key
+  #     MINIO_SECRET_KEY: minio-secret-key
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+  #     interval: 30s
+  #     timeout: 20s
+  #     retries: 3
+  #   ports:
+  #     - "9002:9000"
+  #   volumes:
+  #     - loki-volume:/data/
+  #     - ../loki/docker-entrypoint.sh:/docker-entrypoint.sh
+  #   networks:
+  #     - monitoring_network
 
 networks:
   monitoring_network:
@@ -73,7 +84,7 @@ networks:
     name: main_network
     external: true
 
-volumes: 
+volumes:
   prometheus-volume:
     driver: local
   grafana-volume:
