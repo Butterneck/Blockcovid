@@ -319,7 +319,7 @@ services:
     volumes:
       - ../web-interface/:/app/
     ports:
-      - "4200:4200"
+      - "4201:4200"
     networks:
       - main_network
 
