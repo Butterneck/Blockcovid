@@ -32,8 +32,8 @@ services:
       - monitoring_network
   
   loki:
-    image: grafana/loki
-    command: -config.file=/etc/loki/local-config.yaml
+    image: grafana/loki:2.1.0
+    command: -config.file=/etc/loki/local-config.yaml --log.level=debug
     volumes:
       - ../loki/loki.yaml:/etc/loki/local-config.yaml
     ports:
@@ -47,8 +47,8 @@ services:
 
 
   loki-persistence:
-    image: bitnami/minio
-    # entrypoint: /bin/sh -c "mkdir -p /data/loki && /usr/bin/docker-entrypoint.sh server /data"
+    image: minio/minio
+    entrypoint: /bin/sh -c "mkdir -p /data/loki && /usr/bin/docker-entrypoint.sh server /data"
     environment:
       MINIO_ACCESS_KEY: minio-access-key
       MINIO_SECRET_KEY: minio-secret-key
@@ -61,7 +61,7 @@ services:
       - "9002:9000"
     volumes:
       - loki-volume:/data/
-      # - ../loki/docker-entrypoint.sh:/docker-entrypoint.sh
+      - ../loki/docker-entrypoint.sh:/docker-entrypoint.sh
     networks:
       - monitoring_network
     
