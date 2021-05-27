@@ -16,8 +16,7 @@
   "editable": true,
   "gnetId": 10566,
   "graphTooltip": 1,
-  "id": 4,
-  "iteration": 1622115591024,
+  "iteration": 1622116048286,
   "links": [],
   "panels": [
     {
@@ -2582,7 +2581,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
+          "selected": false,
           "text": [
             "All"
           ],
@@ -2617,7 +2616,7 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
@@ -2648,5 +2647,5 @@
   "timezone": "browser",
   "title": "Docker and OS metrics ( cadvisor, node_exporter )",
   "uid": "Ss3q6hSZk",
-  "version": 5
+  "version": 6
 }
