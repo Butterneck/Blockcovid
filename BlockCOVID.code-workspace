@@ -22,6 +22,9 @@
 			"path": "blockchain-contracts"
 		},
 		{
+			"path": "loadTest"
+		},
+		{
 			"path": "api-gateway"
 		},
 		{
