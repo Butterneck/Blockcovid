@@ -5,15 +5,15 @@ from common.utils import random_word
 workspaces_base_url = '/api/inventory/workspaces'
 
 def list_workspaces(self):
-    self.client.get()
+    return self.client.get(catch_response=True)
 
 
 def get_workspace_by_id(self):
     with self.client.get(workspaces_base_url, catch_response=True) as response:
         try:
             workspace = random.choice(response)
-            self.client.get(
-                f'{workspaces_base_url}/{workspace._id}', name=f"{workspaces_base_url}/workspace_id")
+            return self.client.get(
+                f'{workspaces_base_url}/{workspace._id}', name=f"{workspaces_base_url}/workspace_id", catch_response=True)
         except JSONDecodeError:
             response.failure("Response could not be decoded as JSON")
         except KeyError:
@@ -25,8 +25,8 @@ def get_workspace_by_rfid(self):
     with self.client.get(workspaces_base_url, catch_response=True) as response:
         try:
             workspace = random.choice(response)
-            self.client.get(
-                f'{workspaces_base_url}/{workspace.rfid}', name=f"{workspaces_base_url}/workspace_id")
+            return self.client.get(
+                f'{workspaces_base_url}/{workspace.rfid}', name=f"{workspaces_base_url}/workspace_id", catch_response=True)
         except JSONDecodeError:
             response.failure("Response could not be decoded as JSON")
         except KeyError:
