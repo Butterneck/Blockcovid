@@ -89,7 +89,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "time() - node_boot_time_seconds{instance=~\"$node\"}",
+            "expr": "time() - node_boot_time_seconds{instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -178,7 +178,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "count(rate(container_last_seen{id=~\"/docker/.*\",instance=~\"$node\"}[5m]))",
+            "expr": "count(rate(container_last_seen{id=~\"/docker/.*\",instance=~\"node-exporter:9100\"}[5m]))",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -267,7 +267,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "min((node_filesystem_size_bytes{fstype=~\"xfs|ext4\",instance=~\"$node\"} - node_filesystem_free_bytes{fstype=~\"xfs|ext4\",instance=~\"$node\"} )/ node_filesystem_size_bytes{fstype=~\"xfs|ext4\",instance=~\"$node\"})",
+            "expr": "min((node_filesystem_size_bytes{fstype=~\"xfs|ext4\",instance=~\"node-exporter:9100\"} - node_filesystem_free_bytes{fstype=~\"xfs|ext4\",instance=~\"node-exporter:9100\"} )/ node_filesystem_size_bytes{fstype=~\"xfs|ext4\",instance=~\"node-exporter:9100\"})",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -357,7 +357,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "((node_memory_MemTotal_bytes{instance=~\"$node\"} - node_memory_MemAvailable_bytes{instance=~\"$node\"}) / node_memory_MemTotal_bytes{instance=~\"$node\"}) * 100",
+            "expr": "((node_memory_MemTotal_bytes{instance=~\"node-exporter:9100\"} - node_memory_MemAvailable_bytes{instance=~\"node-exporter:9100\"}) / node_memory_MemTotal_bytes{instance=~\"node-exporter:9100\"}) * 100",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -446,7 +446,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "(node_memory_SwapTotal_bytes{instance=~'$node'} - node_memory_SwapFree_bytes{instance=~'$node'})",
+            "expr": "(node_memory_SwapTotal_bytes{instance=~'node-exporter:9100'} - node_memory_SwapFree_bytes{instance=~'node-exporter:9100'})",
             "format": "time_series",
             "intervalFactor": 2,
             "legendFormat": "",
@@ -535,7 +535,7 @@
         "tableColumn": "",
         "targets": [
           {
-            "expr": "node_load1{instance=~\"$node\"} / count by(job, instance)(count by(job, instance, cpu)(node_cpu_seconds_total{instance=~\"$node\"}))",
+            "expr": "node_load1{instance=~\"node-exporter:9100\"} / count by(job, instance)(count by(job, instance, cpu)(node_cpu_seconds_total{instance=~\"node-exporter:9100\"}))",
             "format": "time_series",
             "hide": true,
             "intervalFactor": 2,
@@ -543,7 +543,7 @@
             "step": 1800
           },
           {
-            "expr": "sum(node_load1{instance=~\"$node\"}) by (instance) / count(node_cpu_seconds_total{mode=\"system\",instance=~\"$node\"}) by (instance) * 100",
+            "expr": "sum(node_load1{instance=~\"node-exporter:9100\"}) by (instance) / count(node_cpu_seconds_total{mode=\"system\",instance=~\"node-exporter:9100\"}) by (instance) * 100",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -616,7 +616,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "sum(rate(container_network_receive_bytes_total{id=\"/\",instance=~\"$node\"}[5m])) by (id)",
+            "expr": "sum(rate(container_network_receive_bytes_total{id=\"/\",instance=~\"node-exporter:9100\"}[5m])) by (id)",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -625,7 +625,7 @@
             "step": 600
           },
           {
-            "expr": "- sum(rate(container_network_transmit_bytes_total{id=\"/\",instance=~\"$node\"}[5m  ])) by (id)",
+            "expr": "- sum(rate(container_network_transmit_bytes_total{id=\"/\",instance=~\"node-exporter:9100\"}[5m  ])) by (id)",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -778,7 +778,7 @@
             "step": 120
           },
           {
-            "expr": "100 - (avg by (instance) (irate(node_cpu_seconds_total{instance=~\"$node\",mode=\"idle\"}[5m])) * 100)",
+            "expr": "100 - (avg by (instance) (irate(node_cpu_seconds_total{instance=~\"node-exporter:9100\",mode=\"idle\"}[5m])) * 100)",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -911,7 +911,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "node_load1{instance=~\"$node\"} / count by(job, instance)(count by(job, instance, cpu)(node_cpu_seconds_total{instance=~\"$node\"}))",
+            "expr": "node_load1{instance=~\"node-exporter:9100\"} / count by(job, instance)(count by(job, instance, cpu)(node_cpu_seconds_total{instance=~\"node-exporter:9100\"}))",
             "format": "time_series",
             "hide": true,
             "intervalFactor": 2,
@@ -919,7 +919,7 @@
             "step": 600
           },
           {
-            "expr": "sum(node_load1{instance=~\"$node\"}) by (instance) / count(node_cpu_seconds_total{mode=\"system\",instance=~\"$node\"}) by (instance) * 100",
+            "expr": "sum(node_load1{instance=~\"node-exporter:9100\"}) by (instance) / count(node_cpu_seconds_total{mode=\"system\",instance=~\"node-exporter:9100\"}) by (instance) * 100",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -1071,7 +1071,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "node_filesystem_size_bytes{fstype=\"ext4\",instance=~\"$node\"} - node_filesystem_free_bytes{fstype=\"ext4\",instance=~\"$node\"}",
+            "expr": "node_filesystem_size_bytes{fstype=\"ext4\",instance=~\"node-exporter:9100\"} - node_filesystem_free_bytes{fstype=\"ext4\",instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -1290,7 +1290,7 @@
             "step": 20
           },
           {
-            "expr": "node_memory_MemTotal_bytes{instance=~\"$node\"} - node_memory_MemAvailable_bytes{instance=~\"$node\"}",
+            "expr": "node_memory_MemTotal_bytes{instance=~\"node-exporter:9100\"} - node_memory_MemAvailable_bytes{instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "hide": true,
             "intervalFactor": 2,
@@ -1353,7 +1353,7 @@
             "step": 30
           },
           {
-            "expr": "node_memory_MemAvailable_bytes{instance=~\"$node\"}",
+            "expr": "node_memory_MemAvailable_bytes{instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -1362,21 +1362,21 @@
             "step": 40
           },
           {
-            "expr": "node_memory_MemFree_bytes{instance=~\"$node\"}",
+            "expr": "node_memory_MemFree_bytes{instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "intervalFactor": 2,
             "legendFormat": "Free memory",
             "refId": "Q"
           },
           {
-            "expr": "node_memory_MemTotal_bytes{instance=~\"$node\"}",
+            "expr": "node_memory_MemTotal_bytes{instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "intervalFactor": 2,
             "legendFormat": "Total memory",
             "refId": "R"
           },
           {
-            "expr": "node_memory_MemTotal_bytes{instance=~\"$node\"}-(node_memory_Buffers_bytes{instance=~\"$node\"}+node_memory_Cached_bytes{instance=~\"$node\"}+node_memory_MemFree_bytes{instance=~\"$node\"})",
+            "expr": "node_memory_MemTotal_bytes{instance=~\"node-exporter:9100\"}-(node_memory_Buffers_bytes{instance=~\"node-exporter:9100\"}+node_memory_Cached_bytes{instance=~\"node-exporter:9100\"}+node_memory_MemFree_bytes{instance=~\"node-exporter:9100\"})",
             "format": "time_series",
             "intervalFactor": 2,
             "legendFormat": "Used memory",
@@ -1487,7 +1487,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "-sum(rate(node_disk_read_bytes_total{instance=~\"$node\"}[5m])) by (device)",
+            "expr": "-sum(rate(node_disk_read_bytes_total{instance=~\"node-exporter:9100\"}[5m])) by (device)",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -1497,7 +1497,7 @@
             "step": 600
           },
           {
-            "expr": "sum(rate(node_disk_written_bytes_total{instance=~\"$node\"}[5m])) by (device)",
+            "expr": "sum(rate(node_disk_written_bytes_total{instance=~\"node-exporter:9100\"}[5m])) by (device)",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -1601,7 +1601,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "rate(container_network_receive_bytes_total{name!=\"\",instance=~\"$node\"}[5m])",
+            "expr": "rate(container_network_receive_bytes_total{name!=\"\",instance=~\"node-exporter:9100\"}[5m])",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -1610,7 +1610,7 @@
             "step": 240
           },
           {
-            "expr": "sum(rate(container_network_transmit_bytes_total{instance=~\"$node\"}[5m])) by (name)",
+            "expr": "sum(rate(container_network_transmit_bytes_total{instance=~\"node-exporter:9100\"}[5m])) by (name)",
             "format": "time_series",
             "hide": true,
             "intervalFactor": 2,
@@ -1715,7 +1715,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "sum(rate(container_network_transmit_bytes_total{name!=\"\",instance=~\"$node\"}[5m])) by (name)",
+            "expr": "sum(rate(container_network_transmit_bytes_total{name!=\"\",instance=~\"node-exporter:9100\"}[5m])) by (name)",
             "format": "time_series",
             "intervalFactor": 2,
             "legendFormat": "{{name}}",
@@ -1826,7 +1826,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "sum(rate(container_cpu_usage_seconds_total{name=~\".+\",instance=~\"$node\"}[5m])) by (name) * 100",
+            "expr": "sum(rate(container_cpu_usage_seconds_total{name=~\".+\",instance=~\"node-exporter:9100\"}[5m])) by (name) * 100",
             "format": "time_series",
             "hide": false,
             "interval": "",
@@ -1930,7 +1930,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "sum(container_memory_rss{name!=\"\",instance=~\"$node\"}) by (name)",
+            "expr": "sum(container_memory_rss{name!=\"\",instance=~\"node-exporter:9100\"}) by (name)",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -2039,7 +2039,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "container_memory_usage_bytes{name!=\"\",instance=~\"$node\"}",
+            "expr": "container_memory_usage_bytes{name!=\"\",instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -2048,7 +2048,7 @@
             "target": ""
           },
           {
-            "expr": "container_spec_memory_limit_bytes{name!=\"\",instance=~\"$node\"}",
+            "expr": "container_spec_memory_limit_bytes{name!=\"\",instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "hide": true,
             "intervalFactor": 2,
@@ -2148,7 +2148,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "container_memory_usage_bytes{name!=\"\",instance=~\"$node\"}",
+            "expr": "container_memory_usage_bytes{name!=\"\",instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "hide": true,
             "intervalFactor": 2,
@@ -2157,7 +2157,7 @@
             "target": ""
           },
           {
-            "expr": "container_spec_memory_limit_bytes{name!=\"\",instance=~\"$node\"}-container_memory_usage_bytes{name!=\"\",instance=~\"$node\"}",
+            "expr": "container_spec_memory_limit_bytes{name!=\"\",instance=~\"node-exporter:9100\"}-container_memory_usage_bytes{name!=\"\",instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "hide": false,
             "intervalFactor": 2,
@@ -2257,7 +2257,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "container_memory_usage_bytes{name!=\"\",instance=~\"$node\"}",
+            "expr": "container_memory_usage_bytes{name!=\"\",instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "hide": true,
             "intervalFactor": 2,
@@ -2266,7 +2266,7 @@
             "target": ""
           },
           {
-            "expr": "container_spec_memory_limit_bytes{name!=\"\",instance=~\"$node\"}",
+            "expr": "container_spec_memory_limit_bytes{name!=\"\",instance=~\"node-exporter:9100\"}",
             "format": "time_series",
             "intervalFactor": 2,
             "legendFormat": "{{name}}",
@@ -2428,7 +2428,7 @@
         ],
         "targets": [
           {
-            "expr": "max(container_memory_usage_bytes{name!=\"\",instance=~\"$node\"}) by (name)",
+            "expr": "max(container_memory_usage_bytes{name!=\"\",instance=~\"node-exporter:9100\"}) by (name)",
             "format": "table",
             "hide": false,
             "instant": true,
@@ -2437,14 +2437,14 @@
             "refId": "A"
           },
           {
-            "expr": "max(container_memory_max_usage_bytes{name!=\"\",instance=~\"$node\"}-container_memory_usage_bytes{name!=\"\",instance=~\"$node\"})by (name)",
+            "expr": "max(container_memory_max_usage_bytes{name!=\"\",instance=~\"node-exporter:9100\"}-container_memory_usage_bytes{name!=\"\",instance=~\"node-exporter:9100\"})by (name)",
             "format": "table",
             "instant": true,
             "intervalFactor": 1,
             "refId": "B"
           },
           {
-            "expr": "max(container_memory_max_usage_bytes{name!=\"\",instance=~\"$node\"}) by (name)",
+            "expr": "max(container_memory_max_usage_bytes{name!=\"\",instance=~\"node-exporter:9100\"}) by (name)",
             "format": "table",
             "instant": true,
             "intervalFactor": 1,
