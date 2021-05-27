@@ -26,4 +26,4 @@ scrape_configs:
   - job_name: node
     static_configs:
       - targets:
-          - "192.168.210.40:9100"
+          - "node-exporter:9100"
