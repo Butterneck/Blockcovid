@@ -5,15 +5,16 @@ from common.utils import random_word
 rooms_base_url = '/api/inventory/rooms'
 
 def list_rooms(self):
-    self.client.get()
+    return self.client.get(rooms_base_url, catch_response=True)
 
 
 def get_room_by_id(self):
     with self.client.get(rooms_base_url, catch_response=True) as response:
         try:
+            response = response.json()
             room = random.choice(response)
-            self.client.get(
-                f'{rooms_base_url}/{room._id}', name=f"{rooms_base_url}/room_id")
+            return self.client.get(
+                f'{rooms_base_url}/{room["_id"]}', name=f"{rooms_base_url}/room_id", catch_response=True)
         except JSONDecodeError:
             response.failure("Response could not be decoded as JSON")
         except KeyError:
@@ -24,9 +25,10 @@ def get_room_by_id(self):
 def get_room_by_rfid(self):
     with self.client.get(rooms_base_url, catch_response=True) as response:
         try:
+            response = response.json()
             room = random.choice(response)
-            self.client.get(
-                f'{rooms_base_url}/{room.rfid}', name=f"{rooms_base_url}/room_id")
+            return self.client.get(
+                f'{rooms_base_url}/{room["rfid"]}', name=f"{rooms_base_url}/room_id", catch_response=True)
         except JSONDecodeError:
             response.failure("Response could not be decoded as JSON")
         except KeyError:
@@ -43,10 +45,11 @@ def add_room(self):
 def patch_room(self):
     with self.client.get(rooms_base_url, catch_response=True) as response:
         try:
+            response = response.json()
             room = random.choice(response)
             patch_data = get_random_room_data()
             self.client.patch(
-                f'{rooms_base_url}/{room._id}', data=patch_data, name=f"{rooms_base_url}/room_id")
+                f'{rooms_base_url}/{room["_id"]}', json=patch_data, name=f"{rooms_base_url}/room_id")
         except JSONDecodeError:
             response.failure("Response could not be decoded as JSON")
         except KeyError:
@@ -57,9 +60,10 @@ def patch_room(self):
 def delete_room(self):
     with self.client.get(rooms_base_url, catch_response=True) as response:
         try:
+            response = response.json()
             room = random.choice(response)
             self.client.delete(
-                f'{rooms_base_url}/{room._id}', name=f"{rooms_base_url}/room_id")
+                f'{rooms_base_url}/{room["_id"]}', name=f"{rooms_base_url}/room_id")
         except JSONDecodeError:
             response.failure("Response could not be decoded as JSON")
         except KeyError:
