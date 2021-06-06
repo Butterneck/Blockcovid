@@ -41,11 +41,11 @@ Il diagramma mostra la sequenza di interazioni tra le classi quando viene esegui
 Il diagramma mostra la sequenza di interazioni tra le classi quando viene eseguita una prenotazione dalla shchermata di creazione di una prenotazione.
 
 - l'evento scatenante è il tap da parte dell'utente sul tab mostrante la pagina *HomeCreaPrenotazione*;
-- *HomeCreaPrenotazione* interagisce con *ApiService* tramite il metodo `getFreeRooms()`, ottenendo come risposta una `List<Rooms>`;
+- *HomeCreaPrenotazione* interagisce con *ApiServiceEmployee* tramite il metodo `getFreeRooms()`, ottenendo come risposta una `List<Rooms>`;
 - l'utente inserisce i dati nei campi della form;
 - l'utente preme sul pulsante prenota, invocando il metodo `validateDati()`;
 - superata la validazione dei dati immessi, grazie al metodo `push()` viene mostrata a video la schermata rappresentata dalla classe *PreviewPrenotazione*;
-- cliccando il pulsante prenota mostrato a video, viene invocato il metodo `createreservation(Prenotazione p)` fornito dalla classe *ApiService*;
+- cliccando il pulsante prenota mostrato a video, viene invocato il metodo `createreservation(Prenotazione p)` fornito dalla classe *ApiServiceEmployee*;
 - viene ritornato la risposta a *PreviewRisultato*, che grazie al metodo `build(String ris)` della classe *DialogRisultato* mostra a video la conferma dell'avvenuta prenotazione.
 
 ### Igienizzazione
@@ -54,12 +54,12 @@ Il diagramma mostra la sequenza di interazioni tra le classi quando viene esegui
 Il diagramma mostra la sequenza di interazioni tra le classi quando viene eseguita una igienizzazione delle stanze.
 
 - l'evento scatenante è il login da parte di un utente *igienizzatore*;
-- la classe *HomeStanzeDaPulire* interagisce con *ApiStanzeService* tramite il metodo `getStanzeSporche()` per ottenere una `List<Stanza>` contenente le stanze da igienizzare;
+- la classe *HomeStanzeDaPulire* interagisce con *ApiCleaner* tramite il metodo `getStanzeSporche()` per ottenere una `List<Stanza>` contenente le stanze da igienizzare;
 - la classe *HomeStanzeDaPulire* mostra a video le stanze sporche e cattura il tap dell'utente;
 - grazie al metodo `push(Stanza s)` viene mostrata a video la schermata *DialogDeleteStanza*, che cattura l'imput utente e viene chiusa;
 - l'input utente viene ritornato a *HomeStanzeDaPulire*, che grazie al metodo `push(Stanza s)` mostra a video il dialog *LetturaNfcStanza*;
 - il dialog sopracitato resta in ascolto di una scansione di un tag NFC, tramite il metodo `readNfc()`;
-- quando il tag NFC viene scansionato il dialog ritorna il valore letto a *HomeStanzeDaPulire*, che interagisce con *ApiStanzeService* grazie al metodo `pulisciStanza(Stanza s)`;
+- quando il tag NFC viene scansionato il dialog ritorna il valore letto a *HomeStanzeDaPulire*, che interagisce con *ApiCleaner* grazie al metodo `pulisciStanza(Stanza s)`;
 - una volta ricetuo il valore di ritorno, *HomeStanzeDaPulire* mostra la scehrmata rappresentata da *DialogRisultato*;
 - una volta premuto il pulsante *exit* mostrato a video, la schermata *DialogRisultato* è chiusa.
 
