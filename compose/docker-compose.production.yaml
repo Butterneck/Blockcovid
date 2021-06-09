@@ -246,7 +246,7 @@ services:
 
   # Identities microservice
   identities:
-    image:registry.gitlab.com/sweleven/identities:latest
+    image: registry.gitlab.com/sweleven/identities:latest
     volumes:
       - ../identities:/app
     ports:
@@ -270,7 +270,7 @@ services:
 
   # API Gateway
   api-gateway:
-    image:registry.gitlab.com/sweleven/api-gateway:latest
+    image: registry.gitlab.com/sweleven/api-gateway:latest
     environment:
       - KONG_DATABASE=off
       - KONG_DECLARATIVE_CONFIG=/usr/local/kong/declarative/kong.yml
