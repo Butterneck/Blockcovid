@@ -17,3 +17,5 @@ kubernetes: ## Starts project using minikube
 
 cluster-ip:	## Get entrypoint for k8s
 	@minikube service -n kong kong-proxy --url | head -1
+production-up: ## Starts project using docker-compose
+	docker-compose -f ./compose/docker-compose.production.yaml up --build
