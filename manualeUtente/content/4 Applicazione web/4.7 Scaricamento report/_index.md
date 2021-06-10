@@ -5,12 +5,12 @@ Da questa schermata, un *amministratore* autenticato avrà la possibilità di **
 Per generare e scaricare un report l'*amministratore* dovrà eseguire i seguenti passaggi:
 
 ### 1. Selezione data
-Da apposito widget a calendario *evidenziato in rosso*, l'amministratore può selezionare la data desiderata nel quale si desidera consultare lo storico di utilizzo ed igienizzazione delle postazioni, come nella seguente immagine:
+Da apposito widget a calendario *evidenziato in rosso*, l'amministratore può **selezionare la data** desiderata nel quale si desidera consultare lo storico di utilizzo ed igienizzazione delle postazioni, come nella seguente immagine:
 
 ![schermata report - data](assets/web/report1.png)
 
 ### 2. Selezione postazioni
-Una volta selezionata la data, apparirà a video la *lista di postazioni* nelle relative stanze censite nel sistema. Per avere un report di una specifica postazione, l'*amministratore* dovrà selezionare la postazione, o gruppo di postazioni desiderate, tramite *click* sinistro del mouse.  
+Una volta selezionata la data, apparirà a video la **lista di postazioni** nelle relative stanze censite nel sistema. Per avere un report di una specifica postazione, l'*amministratore* dovrà selezionare la postazione, o gruppo di postazioni desiderate, tramite *click* sinistro del mouse.  
 
 ![schermata report - postazioni](assets/web/report2.png)
 
@@ -21,7 +21,7 @@ Una volta selezionate le postazioni desiderate, il sistema mostrerà a video la 
 ![schermata report - utenti](assets/web/report3.png)
 
 ### 4. Tipo report
-Terminata la selezione di utenti e stanze, l'*amministratore* avrà la possibilità di selezionare due tipi di reportistica offerti dall'applicazione:
+Terminata la selezione di utenti e stanze, l'*amministratore* avrà la possibilità di selezionare **due** tipi di reportistica offerti dall'applicazione:
 
 
 1. **Cleanings history**, ovvero lo storico delle igienizzazioni effettuate dagli utenti selezionati;
@@ -30,7 +30,7 @@ Terminata la selezione di utenti e stanze, l'*amministratore* avrà la possibili
 
 
 ### 5. Conferma
-Inseriti tutti i dati richiesti, il sistema, prima di generare il report, chiederà conferma all'*amministratore* circa i dati precedentemente inseriti.
+Inseriti tutti i dati richiesti, il sistema, prima di generare il report, chiederà **conferma all'*amministratore*** circa i dati precedentemente inseriti.
 Se i dati inseriti sono corretti, l'*amministratore* potrà confermare la creazione del report premendo sul pulsante "**DOWNLOAD**" cerchiato in rosso nell'immagine, altrimenti, per modificare i dati inseriti, basterà premere sul pulsante "**PREV**".
 
 ![schermata report - tipo report](assets/web/report5.png)
