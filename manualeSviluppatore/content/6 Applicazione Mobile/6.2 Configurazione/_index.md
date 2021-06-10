@@ -1,3 +1,14 @@
+---
+
+resources:
+  - name: screenshotUtilizzo
+    src: "tempoUtilizzo.png"
+    title: Screenshot del tempo di utilizzo dell'applicativo mobile
+  - name: screenshotPercentuale
+    src: "percentualeUtilizzo.png"
+    title: Screenshot della percentuale di utilizzo della batteria
+---
+
 ## Requisiti di sistema
 I requisiti minimi di sistema per poter sviluppare sul *frontend* web sono i medesimi relativi allo sviluppo sul *backend*, descritti nella sezione **4.2**.
 
@@ -31,6 +42,13 @@ I requisiti minimi di sistema per poter sviluppare sul *frontend* web sono i med
 
 4. Se tutto è andato a buon fine l'applicazione avvierà la *UI* relativa al Login da parte dell'utente, altrimenti sarà visualizzato un messaggio di errore relativo alle correzioni da apportare. 
 
+### Consumo batteria del dispositivo
 
+Prima del rilascio dell'applicativo mobile, è stato eseguito il test del consummo della batteria: l'applicazione è stata lasciata aperta, con lo schermo spento e il traccaimento del GPS attivo per **1 ora**.
 
+Il consumo complessivo di batteria da parte dell'applicazione è stato del **2%**. Il risultato è accettabile, ed esso in futuro non dovrà disostarsi del ±1%.
 
+Gli screenshot sottostanti mostrano il tempo di utilizzo dell'applicazione, e la percentuale di discarica causata dalla stessa.
+
+{{< img name="screenshotUtilizzo" size="small" lazy=true >}}
+{{< img name="screenshotPercentuale" size="small" lazy=true >}}
