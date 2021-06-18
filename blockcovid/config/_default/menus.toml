@@ -15,6 +15,11 @@
   identifier = "manuale-utente"
   url = "/docs/manuale-utente"
 
+[[docs]]
+  name = "Manuale sviluppatore"
+  identifier = "manuale-sviluppatore"
+  url = "/docs/manuale-sviluppatore"
+
 [[main]]
   name = "Docs"
   url = "/docs/prologue/introduction/"
