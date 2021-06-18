@@ -25,9 +25,7 @@ services:
 
   # Inventory microservice
   inventory:
-    build:
-      dockerfile: docker/dockerfile.develop
-      context: ../inventory
+    image: registry.gitlab.com/sweleven/inventory:latest
     volumes:
       - ../inventory:/app
     ports:
@@ -82,9 +80,7 @@ services:
 
   # Blockchain-interactor microservice
   blockchain-interactor:
-    build:
-      dockerfile: docker/dockerfile.develop
-      context: ../blockchain-interactor
+    image: registry.gitlab.com/sweleven/blockchain-interactor:latest
     volumes:
       - ../blockchain-interactor:/app
     ports:
@@ -142,9 +138,7 @@ services:
 
   # Booking microservice
   booking:
-    build:
-      dockerfile: docker/dockerfile.develop
-      context: ../booking
+    image: registry.gitlab.com/sweleven/booking:latest
     volumes:
       - ../booking:/app
     ports:
@@ -198,9 +192,7 @@ services:
 
   # Cleanings microservice
   cleanings:
-    build:
-      dockerfile: docker/dockerfile.develop
-      context: ../cleanings
+    image: registry.gitlab.com/sweleven/cleanings:latest
     volumes:
       - ../cleanings:/app
     ports:
@@ -254,9 +246,7 @@ services:
 
   # Identities microservice
   identities:
-    build:
-      dockerfile: docker/dockerfile.develop
-      context: ../identities
+    image: registry.gitlab.com/sweleven/identities:latest
     volumes:
       - ../identities:/app
     ports:
@@ -280,9 +270,7 @@ services:
 
   # API Gateway
   api-gateway:
-    build:
-      dockerfile: dockerfile
-      context: ../api-gateway
+    image: registry.gitlab.com/sweleven/api-gateway:latest
     environment:
       - KONG_DATABASE=off
       - KONG_DECLARATIVE_CONFIG=/usr/local/kong/declarative/kong.yml
@@ -313,9 +301,7 @@ services:
 
   # Web Interface
   web-interface:
-    build:
-      dockerfile: docker/dockerfile.develop
-      context: ../web-interface
+    image: registry.gitlab.com/sweleven/web-interface:latest
     volumes:
       - ../web-interface/:/app/
     ports:
@@ -341,9 +327,6 @@ services:
     #     mode: "non-blocking"
     #     loki-batch-wait: 1s
     #     loki-batch-size: "1000"
-    #     loki-min-backoff: 1s
-    #     loki-retries: "30"
-    #     loki-url: "loki:3100/loki/api/v1/push"
   
 
 networks:
