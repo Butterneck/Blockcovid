@@ -1,5 +1,9 @@
 | Versione 	| Data 	     | Descrizione 	                   | Nominativo       	    | Ruolo 	    | Verifica         |
 |----------	|------	     |-------------	                   |------------      	    |-------	    |----------        |
+|   1.0.0  	| 2021-06-09 | Approvazione finale             | Filippo Pinton         | Responsabile  | /                |
+|   0.9.1  	| 2021-06-03 | Correzione screenshot           | Edoardo Caregnato      | Progettista   | Alessio Trevisan |
+|   0.9.0  	| 2021-05-30 | Ampliamento §4.4, §4.5, aggiunta sezione §4.7          | Edoardo Caregnato      | Progettista   | Alessio Trevisan |
+|   0.8.1  	| 2021-05-07 | Correzioni grammaticali minori  | Edoardo Caregnato      | Progettista   | Filippo Pinton   |
 |   0.8.0  	| 2021-05-06 | Stesura §5.2 e aggiornamento §A | Edoardo Caregnato      | Progettista   | Filippo Pinton   |
 |   0.7.2  	| 2021-05-04 | Modifica §5.3, §5.4, §4.6       | Edoardo Caregnato      | Progettista   | Alessio Trevisan |
 |   0.7.1  	| 2021-05-02 | Aggiornamento §A Glossario      | Edoardo Caregnato      | Progettista   | Alessio Trevisan |

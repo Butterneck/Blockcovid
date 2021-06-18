@@ -1,5 +1,8 @@
 | Versione | Data 	    | Descrizione 	                                   | Nominativo 	     | Ruolo 	     | Verificato da      |
 |--------- |------	    |-------------	                                   |------------	     |-------	     |----------          |
+|   1.0.0  | 2021-06-09 | Approvazione                                     | Filippo Pinton      | Responsabile  | /   |
+|   0.10.1 | 2021-06-06 | Ampliamento capitolo §4.4                        | Edoardo Caregnato   | Progettista   | Alessio Trevisan   |
+|   0.10.0 | 2021-05-29 | Ampliamento capitolo §6                          | Andrea De Tomasi    | Progettista   | Alessio Trevisan   |
 |   0.9.1  | 2021-05-03 | Aggiornamento glossario                          | Filippo Pinton      | Progettista   | Alessio Trevisan   |
 |   0.9.0  | 2021-05-03 | Stesura §4.5                                     | Filippo Pinton      | Progettista   | Alessio Trevisan   |
 |   0.8.0  | 2021-05-02 | Aggiunte dipendenze esterne su §4.3              | Filippo Pinton	     | Progettista   | Edoardo Caregnato  |

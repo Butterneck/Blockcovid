@@ -13,10 +13,16 @@
 			"path": "identities"
 		},
 		{
+			"path": "cleanings"
+		},
+		{
 			"path": "web-interface"
 		},
 		{
 			"path": "blockchain-contracts"
+		},
+		{
+			"path": "loadTest"
 		},
 		{
 			"path": "api-gateway"
@@ -32,6 +38,18 @@
 		},
 		{
 			"path": "compose"
+		},
+		{
+			"path": "kong"
+		},
+		{
+			"path": "grafana"
+		},
+		{
+			"path": "prometheus"
+		},
+		{
+			"path": "loki"
 		},
 		{
 			"path": "k8s"
