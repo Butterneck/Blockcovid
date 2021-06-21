@@ -22,7 +22,6 @@ test_website:
 build_website:
   stage: build
   script:
-    - mkdir -p public
     - cd $WEBSITE_PATH
     - npm i
     - npm run build
