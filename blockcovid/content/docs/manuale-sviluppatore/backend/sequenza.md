@@ -1,6 +1,6 @@
 ---
-title: "Diagrammi di sequenza"
-description: "Sequence diagrams."
+title: "Diagrammi di sequenza backend"
+description: "Backend sequence diagrams."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false

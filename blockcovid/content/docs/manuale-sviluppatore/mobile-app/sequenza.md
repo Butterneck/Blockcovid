@@ -1,5 +1,5 @@
 ---
-title: "Diagrammi di sequenza mobile"
+title: "Diagrammi di sequenza mobile app"
 description: "Sequence diagrams."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
