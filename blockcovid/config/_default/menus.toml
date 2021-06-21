@@ -1,14 +1,8 @@
 [[docs]]
-  name = "Prologue"
+  name = "Prologo"
   weight = 10
-  identifier = "prologue"
-  url = "/docs/prologue/"
-
-[[docs]]
-  name = "Help"
-  weight = 90
-  identifier = "help"
-  url = "/docs/help/"
+  identifier = "prologo"
+  url = "/docs/prologo/"
 
 [[docs]]
   name = "Manuale utente"
@@ -43,7 +37,7 @@
 
 [[main]]
   name = "Docs"
-  url = "/docs/prologue/introduction/"
+  url = "/docs/prologo/introduzione/"
   weight = 10
 
 [[main]]

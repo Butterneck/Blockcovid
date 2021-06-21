@@ -8,7 +8,7 @@ images: []
 menu:
   docs:
     parent: "mobile-app"
-weight: 700
+weight: 520
 toc: true
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: "Prodotto man svil"
-description: "Prodotto."
+title: "Architettura"
+description: "Architecture."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
@@ -8,7 +8,7 @@ images: []
 menu:
   docs:
     parent: "manuale-sviluppatore"
-weight: 720
+weight: 210
 toc: true
 ---
 

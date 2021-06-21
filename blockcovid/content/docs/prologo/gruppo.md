@@ -1,5 +1,5 @@
 ---
-title: "Gruppo man ut"
+title: "Gruppo"
 description: "Gruppo."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
@@ -7,8 +7,8 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "manuale-utente"
-weight: 500
+    parent: "prologo"
+weight: 20
 toc: true
 ---
 
