@@ -1,13 +1,13 @@
 ---
-title: "Package web app"
-description: "Web app package diagrams."
+title: "Package mobile app"
+description: "Mobile app package diagrams."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
 images: []
 menu:
   docs:
-    parent: "web-app"
+    parent: "mobile-app"
 weight: 700
 toc: true
 ---
