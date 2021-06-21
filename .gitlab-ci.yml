@@ -7,54 +7,23 @@ stages:
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  MANUALE_UTENTE_PATH: manualeUtente
-  MANUALE_SVILUPPATORE_PATH: manualeSviluppatore
+  WEBSITE_PATH: blockcovid
 
-test_manuale_utente:
+test_website:
   stage: test
   script:
     - apk update && apk add git
-    - hugo -s $MANUALE_UTENTE_PATH
+    - hugo -s $WEBSITE_PATH
   # except:
   #   variables:
   #     - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
-test_manuale_sviluppatore:
-  stage: test
-  script:
-    - apk update && apk add git
-    - hugo -s $MANUALE_SVILUPPATORE_PATH
-  # except:
-  #   variables:
-  #     - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-
-build_index:
-  stage: build
-  script:
-    - mkdir -p public
-    - cp index.html public
-  artifacts:
-    paths:
-      - public
-
-build_manuale_utente:
+build_website:
   stage: build
   script:
     - apk update && apk add git
-    - hugo -s $MANUALE_UTENTE_PATH
-    - mkdir -p public
-    - mv $MANUALE_UTENTE_PATH/public public/manualeUtente
-  artifacts:
-    paths:
-      - public
-
-build_manuale_sviluppatore:
-  stage: build
-  script:
-    - apk update && apk add git
-    - hugo -s $MANUALE_SVILUPPATORE_PATH
-    - mkdir -p public
-    - mv $MANUALE_SVILUPPATORE_PATH/public public/manualeSviluppatore
+    - hugo -s $WEBSITE_PATH 
+    - mv $WEBSITE_PATH/public public
   artifacts:
     paths:
       - public
