@@ -41,18 +41,13 @@
   weight = 10
 
 [[main]]
-  name = "Blog"
-  url = "/blog/"
-  weight = 20
-
-[[main]]
   name = "Manuale ut"
-  url = "/manuale-utente/"
+  url = "/docs/manuale-utente/"
   weight = 30
 
 [[main]]
   name = "Manuale svil"
-  url = "/manuale-sviluppatore/"
+  url = "/docs/manuale-sviluppatore/"
   weight = 40
 
 [[social]]

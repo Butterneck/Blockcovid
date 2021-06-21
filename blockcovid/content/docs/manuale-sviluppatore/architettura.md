@@ -11,16 +11,11 @@ menu:
 weight: 210
 toc: true
 ---
-
-Il sistema ***BlockCOVID*** riguarda il *tracciamento* dell’utilizzo e dell’igienizzazione di postazioni di lavoro, da parte di utenti registrati, all’interno di relative stanze, nel contesto di un laboratorio informatico.</br>
-
-## Componenti
 Il prodotto si compone principalmente di:
 - un ***backend*** su *server* dedicato, per la gestione operativa delle funzionalità;
 - un'***applicazione web*** per permettere all'amministratore di interfacciarsi con il server;
 - un'***applicazione mobile*** che permette agli utenti di usufruire dei servizi offerti.
 
-## Architettura di base
 Il prodotto e' stato sviluppato utilizzando un'architettura a microservizi.
 
 Per realizzare un’architettura funzionale allo scopo del prodotto si è scelto di seguire un modello di architettura a *microservizi* che utilizza l’*API gateway* (come conseguenza dell’uso di questi). </br>
