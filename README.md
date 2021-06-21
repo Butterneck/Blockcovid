@@ -18,9 +18,9 @@ src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
 
 ## Description
 
-Meta repo of [BlockCOVID](sweleven.gitlab.io/blockcovid).
+Meta repo of [BlockCOVID](https://sweleven.gitlab.io/blockcovid/).
 
-Since [BlockCOVID](sweleven.gitlab.io/blockcovid) code is divided into multiple repos (one for every microservice) this meta-repo comes in handy for managing them. 
+Since [BlockCOVID](https://sweleven.gitlab.io/blockcovid/) code is divided into multiple repos (one for every microservice) this meta-repo comes in handy for managing them. 
 
 ## Get repositories
 
