@@ -25,7 +25,7 @@ Nella seguente immagine viene descritta la struttura e le relazioni principali d
 A [questo indirizzo](https://sweleven.gitlab.io/blockchain-interactor/) è inoltre possibile visionare la documentazione di tutti i metodi di tutte le classi.
 
 
-<img src="../assets/classibi.png" alt="class diagram" caption="<em>diagramma delle classi</em>" class="border-0" width="100%">
+<img src="../assets/classbi.png" alt="class diagram" caption="<em>diagramma delle classi</em>" class="border-0" width="100%">
 
 ### Dipendenze esterne
 

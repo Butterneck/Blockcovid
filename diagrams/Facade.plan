@@ -1,0 +1,18 @@
+@startuml
+
+autonumber
+autoactivate on
+
+[-> IdentitiesService: GET</simpleAPI>
+
+IdentitiesService -> IAMProvider: GET</complexAPI>
+IAMProvider --> IdentitiesService: complexEntity
+
+IdentitiesService -> IdentitiesService: simplify(complexEntity)https://github.com/FiammettaFMC/Documentation/
+
+return simplifiedEntity
+
+[<-- IdentitiesService: simplifiedEntity
+
+
+@enduml

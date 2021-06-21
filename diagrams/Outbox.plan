@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+autoactivate on
+
+activate Scheduler
+Scheduler ->> MessageRelay: checkForMessages()
+
+MessageRelay ->> Database: getMessages()
+
+Database -->> MessageRelay: messages
+
+
+loop forEach message
+  MessageRelay ->> MessageBroker: publish(message)
+
+  alt message delivered
+    MessageBroker -->> MessageRelay: ack
+    MessageRelay ->> Database: delete(message)
+    Database -->> MessageRelay: deleted
+  end
+end
+
+@enduml

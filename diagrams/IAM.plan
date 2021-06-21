@@ -1,0 +1,54 @@
+@startuml
+
+autonumber
+
+participant User
+participant OIDCProvider
+participant APIGateway
+participant BackendAPI
+
+note over User, BackendAPI: When the user isn't authenticated
+
+User -> APIGateway: GET /<api>
+APIGateway --> User: Redirect to OIDC Provider \n for Authorization Grant
+
+User -> OIDCProvider: Login
+activate OIDCProvider
+
+OIDCProvider --> User: Redirect to APIGateway \n with Authorization Grant
+
+deactivate OIDCProvider
+
+User -> APIGateway: GET /<api> \n with Authorization Grant
+
+APIGateway -> OIDCProvider
+activate OIDCProvider
+
+OIDCProvider --> APIGateway: Exchange Grant for Access Token \n and ID Token
+deactivate OIDCProvider
+
+APIGateway -> OIDCProvider: Get Userinfo AT
+activate OIDCProvider
+
+OIDCProvider --> APIGateway: Userinfo response
+deactivate OIDCProvider
+
+
+APIGateway -> APIGateway: Store AT, ID token and refresh token
+
+APIGateway -> BackendAPI: GET /<api> \n with X-Userinfo
+
+BackendAPI --> User: HTTP response
+
+note over User, BackendAPI: From this point on APIGateway stores the session in a cookie \n and the login procedure isn't required.
+
+User -> APIGateway: GET /<api>
+APIGateway -> APIGateway: Use data in cookie and ad X-Userinfo
+
+APIGateway -> BackendAPI: GET /<api> \n with X-Userinfo
+
+BackendAPI --> User: HTTP response
+
+
+
+@enduml

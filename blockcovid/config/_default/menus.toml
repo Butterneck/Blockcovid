@@ -6,7 +6,7 @@
 
 [[docs]]
   name = "Help"
-  weight = 60
+  weight = 90
   identifier = "help"
   url = "/docs/help/"
 
@@ -14,11 +14,32 @@
   name = "Manuale utente"
   identifier = "manuale-utente"
   url = "/docs/manuale-utente"
+  weight = 30
 
 [[docs]]
   name = "Manuale sviluppatore"
   identifier = "manuale-sviluppatore"
   url = "/docs/manuale-sviluppatore"
+  weight = 40
+
+[[docs]]
+  name = "Backend"
+  identifier = "backend"
+  url = "/docs/manuale-sviluppatore/backend"
+  weight = 50
+
+[[docs]]
+  name = "App web"
+  identifier = "web-app"
+  url = "/docs/manuale-sviluppatore/web-app"
+  weight = 60
+
+[[docs]]
+  name = "App mobile"
+  identifier = "mobile-app"
+  url = "/docs/manuale-sviluppatore/mobile-app"
+  weight = 70
+
 
 [[main]]
   name = "Docs"

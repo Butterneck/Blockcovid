@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+
+participant GenericService
+participant Database
+collections EntityCollection
+collections OutboxCollection
+
+activate GenericService
+
+GenericService -> Database: save(entity)
+
+group transaction
+    activate Database
+
+    Database -> EntityCollection: save(entity)
+    Database -> OutboxCollection: save(entity)
+end
+
+Database --> GenericService: entity
+deactivate Database
+
+@enduml

@@ -1,0 +1,65 @@
+@startuml
+
+autonumber
+autoactivate on
+
+participant MessageBroker
+participant BlockchainInteractorService
+participant Database
+participant ObjectStorage
+participant Blockchain
+
+[->MessageBroker: newMessage
+
+MessageBroker ->> BlockchainInteractorService: handleMessage(message)
+
+' activate BlockchainInteractorService
+BlockchainInteractorService -> BlockchainInteractorService: calculateHash(message)
+' activate BlockchainInteractorService
+
+BlockchainInteractorService -> Database: findByHash(messageHash)
+
+alt message already registered
+    Database --> BlockchainInteractorService: messages
+    note over BlockchainInteractorService: Execution stops:\nmessage already registered \n(idempotence)
+
+    else message not already registered
+
+    Database --> BlockchainInteractorService: none
+    BlockchainInteractorService --> BlockchainInteractorService: register
+    ' deactivate BlockchainInteractorService
+
+end
+
+BlockchainInteractorService -> ObjectStorage: store(message)
+ObjectStorage --> BlockchainInteractorService: objectUrl
+
+BlockchainInteractorService -> Database: save({objectUrl, messageHash})
+Database --> BlockchainInteractorService: {objectUrl, messageHash}
+
+
+BlockchainInteractorService -> Blockchain: createStepProof(messageHash)
+
+alt hash not stored
+    Blockchain --> BlockchainInteractorService: false
+
+    BlockchainInteractorService -> Database: delete(messageHash)
+    Database --> BlockchainInteractorService: {objectUrl, messageHash}
+
+    BlockchainInteractorService -> ObjectStorage: delete(objectUrl)
+    ObjectStorage --> BlockchainInteractorService: true
+
+    note over BlockchainInteractorService: Execution stops
+
+    else hash stored
+
+    Blockchain --> BlockchainInteractorService: transactionHash
+    BlockchainInteractorService -> Database: update(messageHash, transactionHash)
+    Database --> BlockchainInteractorService: {objectUrl, messageHash, transactionHash}
+
+    ' deactivate BlockchainInteractorService
+end
+
+
+
+@enduml

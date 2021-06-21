@@ -22,11 +22,11 @@ Nella seguente immagine viene descritta la struttura dei package del servizio **
 
 Nella seguente immagine viene descritta la struttura e le relazioni principali delle classi che compongono il servizio **Cleaning**.
 
-A [questo indirizzo](https://sweleven.gitlab.io/cleaning/) è inoltre possibile visionare la documentazione di tutti i metodi di tutte le classi.
+A [questo indirizzo](https://sweleven.gitlab.io/cleanings/) è inoltre possibile visionare la documentazione di tutti i metodi di tutte le classi.
 
 
 <img src="../assets/classcleaning.png" alt="class diagram" caption="<em>diagramma delle classi</em>" class="border-0" width="100%">
 
 ### Dipendenze esterne
 
-A [questo indirizzo](https://sweleven.gitlab.io/cleaning/dependencies.html) è possibile visualizzare le dipendenze esterne.
+A [questo indirizzo](https://sweleven.gitlab.io/cleanings/dependencies.html) è possibile visualizzare le dipendenze esterne.
