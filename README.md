@@ -18,6 +18,10 @@ Meta repo of [BlockCOVID](https://sweleven.gitlab.io/blockcovid/).
 
 Since [BlockCOVID](https://sweleven.gitlab.io/blockcovid/) code is divided into multiple repos (one for every microservice) this meta-repo comes in handy for managing them.
 
+## Docs
+- [User manual](https://sweleven.gitlab.io/blockcovid/docs/manuale-utente/)
+- [Developer manual](https://sweleven.gitlab.io/blockcovid/docs/manuale-sviluppatore/)
+
 ## Repos
 
 <table>
