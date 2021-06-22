@@ -7,15 +7,6 @@
 <h1>BlockCOVID</h1>
 </div>
 
-<p align="center">
-<a href="https://paypal.me/kamilmysliwiec" target="_blank" target="_blank"><img 
-src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" target="_blank" /></a>
-<a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us" target="_blank"></a>
-</p>
-
-<hr>
-
 ## Description
 
 Meta repo of [BlockCOVID](https://sweleven.gitlab.io/blockcovid/).
