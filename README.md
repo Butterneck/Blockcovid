@@ -7,6 +7,11 @@
 <h1>BlockCOVID</h1>
 </div>
 
+<p align="center">
+<a href="https://gitlab.com/sweleven/blockcovid/-/pipelines"><img src="https://gitlab.com/sweleven/blockcovid/badges/master/pipeline.svg" /></a>
+
+<hr>
+
 ## Description
 
 Meta repo of [BlockCOVID](https://sweleven.gitlab.io/blockcovid/).
