@@ -1,6 +1,6 @@
 <div align="center" style="font-size: 7em">
 
-<img src="https://img.icons8.com/emoji/192/000000/books-emoji.png"/>
+<img src="https://img.icons8.com/emoji/100/000000/books-emoji.png"/>
 </div>
 
 <div align="center">
@@ -21,6 +21,62 @@ src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
 Meta repo of [BlockCOVID](https://sweleven.gitlab.io/blockcovid/).
 
 Since [BlockCOVID](https://sweleven.gitlab.io/blockcovid/) code is divided into multiple repos (one for every microservice) this meta-repo comes in handy for managing them. 
+
+
+## Repos
+<div style="padding: 1em 0">
+    <a href="https://gitlab.com/sweleven/booking">
+        <span style="display: inline-block; min-width: 24%; text-align: center">
+            <img src="https://img.icons8.com/emoji/100/000000/notebook-with-decorative-cover.png"/>
+            <div><strong>Booking</strong></div>
+        </span>
+    </a>
+    <a href="https://gitlab.com/sweleven/cleanings">
+        <span style="display: inline-block; min-width: 24%; text-align: center">
+            <img src="https://img.icons8.com/emoji/100/000000/ambulance-emoji.png"/>
+            <div><strong>Cleanings</strong></div>
+        </span>
+    </a>
+    <a href="https://gitlab.com/sweleven/blockchain-interactor">
+        <span style="display: inline-block; min-width: 24%; text-align: center">
+            <img src="https://img.icons8.com/emoji/100/000000/locked-with-pen.png"/>
+            <div><strong>Blockchain Interactor</strong></div>
+        </span>
+    </a>
+    <a href="https://gitlab.com/sweleven/identities">
+        <span style="display: inline-block; min-width: 24%; text-align: center">
+            <img src="https://img.icons8.com/emoji/100/000000/man-cook.png"/>
+            <div><strong>Identities</strong></div>
+        </span>
+    </a>
+</div>
+
+<div style="padding: 1em 0">
+    <a href="https://gitlab.com/sweleven/web-interface">
+        <span style="display: inline-block; min-width: 24%; text-align: center">
+            <img src="https://img.icons8.com/emoji/100/000000/laptop-emoji.png"/>
+            <div><strong>Web Interface</strong></div>
+        </span>
+    </a>
+    <a href="https://gitlab.com/sweleven/blockchain-contracts">
+        <span style="display: inline-block; min-width: 24%; text-align: center">
+            <img src="https://img.icons8.com/emoji/100/000000/memo-emoji.png"/>
+            <div><strong>Blockchain Contracts</strong></div>
+        </span>
+    </a>
+    <a href="https://gitlab.com/sweleven/inventory">
+        <span style="display: inline-block; min-width: 24%; text-align: center">
+            <img src="https://img.icons8.com/emoji/100/000000/card-file-box-emoji.png"/>
+            <div><strong>Inventory</strong></div>
+        </span>
+    </a>
+    <a href="https://gitlab.com/sweleven/android-app">
+        <span style="display: inline-block; min-width: 24%; text-align: center">
+            <img src="https://img.icons8.com/emoji/100/000000/mobile-phone.png"/>
+            <div><strong>Android App</strong></div>
+        </span>
+    </a>
+</div>
 
 ## Get repositories
 
