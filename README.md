@@ -1,6 +1,6 @@
 <div align="center" style="font-size: 7em">
 
-<img src="https://img.icons8.com/emoji/100/000000/books-emoji.png"/>
+<img src="https://img.icons8.com/emoji/192/000000/books-emoji.png"/>
 </div>
 
 <div align="center">
