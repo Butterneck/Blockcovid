@@ -12,6 +12,8 @@ weight: 340
 toc: true
 ---
 
+[Visit repository](https://gitlab.com/sweleven/inventory)
+
 ## Package
 
 Nella seguente immagine viene descritta la struttura dei package del servizio **Inventory**, le dipendenze principali tra di essi e le classi al loro interno.
